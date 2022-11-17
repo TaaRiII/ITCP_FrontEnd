@@ -1,0 +1,39 @@
+.wrapper {
+    background-image: url(../../../Images/design.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.card{
+    background-color: #0a3255;
+    color: #f9fafb;
+    box-shadow: 0 0.3rem 1.8rem rgb(0 0 0 / 47%);
+}
+
+.head-in{
+    color: #ffffff;
+}
+.login-separater span{
+    background: #07135512;
+    opacity: 0.9;
+}
+.rg-bt{
+    color: #ffffff;
+    background-color: #071355;
+    border-color: #071355;
+    opacity: 0.9;
+}
+.rg-bt:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+.bg-front{
+    background-image: url(../../../Images/design.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0% 5%;
+}
