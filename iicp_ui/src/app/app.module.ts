@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders,NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { EmployeesListComponent } from './Components/Employees/employees-list/employees-list.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule,HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { fakeBackendProvider } from './Helpers/fake-backend';
 import { AddEmployeeComponent } from './Components/Employees/add-employee/add-employee.component';
-import { SiteHeaderComponent } from './User_View/Layout/site-header/site-header.component';
+// import { SiteHeaderComponent } from './User_View/Layout/site-header/site-header.component';
 import { SideBarComponent } from './User_View/Layout/side-bar/side-bar.component';
-import { SiteFooterComponent } from './User_View/Layout/site-footer/site-footer.component';
-import { AppLayoutComponent } from './User_View/Layout/app-layout/app-layout.component';
+// import { SiteFooterComponent } from './User_View/Layout/site-footer/site-footer.component';
+// import { AppLayoutComponent } from './User_View/Layout/app-layout/app-layout.component';
 import { FormComponent } from './User_View/Layout/form/form.component';
 import { LoginFormComponent } from './User_View/Layout/login-form/login-form.component';
 import { SignupFormComponent } from './User_View/Layout/signup-form/signup-form.component';
@@ -22,7 +23,15 @@ import { UserDashboardComponent } from './User_View/Layout/user-dashboard/user-d
 import { RenewCertificateComponent } from './User_View/Layout/renew-certificate/renew-certificate.component';
 import { UserProfileComponent } from './User_View/Layout/user-profile/user-profile.component';
 import { SearchRegisterAcountsComponent } from './User_View/Layout/search-register-acounts/search-register-acounts.component';
+import { AppLayoutModule } from './User_View/Layout/app-layout/app-layout.component.module';
+ import {
+   SharedModule,
+   SiteHeaderComponent,
+   SiteFooterComponent,
+ } from './shared';
 
+ import { JwtInterceptor } from './Helpers/jwt.interceptor';
+ import {ErrorInterceptor } from './Helpers/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,7 +39,7 @@ import { SearchRegisterAcountsComponent } from './User_View/Layout/search-regist
     EmployeesListComponent,
     SiteHeaderComponent,
     SiteFooterComponent,
-    AppLayoutComponent,
+    // AppLayoutComponent,
     SideBarComponent,
     FormComponent,
     LoginFormComponent,
@@ -44,14 +53,27 @@ import { SearchRegisterAcountsComponent } from './User_View/Layout/search-regist
     RenewCertificateComponent,
     UserProfileComponent,
     SearchRegisterAcountsComponent,
+    
    
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  // providers: [],
+
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

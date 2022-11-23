@@ -26,7 +26,10 @@
       "node_modules/@types",
       "node_modules/@angular",
       "node_modules/@angular/common/http"
-    ]
+    ],
+    "strictPropertyInitialization":false,
+    "noImplicitAny": false
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

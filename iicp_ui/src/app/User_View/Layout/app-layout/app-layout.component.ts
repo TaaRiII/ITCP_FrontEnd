@@ -13,3 +13,9 @@ export class AppLayoutComponent implements OnInit {
   }
 
 }
+
+
+export * from '../site-header/site-header.component';
+export * from '../site-footer/site-footer.component';
+export * from '../side-bar/side-bar.component';
+// export * from '../site-footer/site-footer.component';

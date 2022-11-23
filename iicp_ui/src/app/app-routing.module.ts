@@ -11,21 +11,26 @@ import { RenewCertificateComponent } from './User_View/Layout/renew-certificate/
 import { UserProfileComponent } from './User_View/Layout/user-profile/user-profile.component';
 import { SearchRegisterAcountsComponent } from './User_View/Layout/search-register-acounts/search-register-acounts.component';
 
+import { AuthGuard } from './Helpers/auth.guard';
 
 
 
 const routes: Routes = [
-  {
-    path: '',
-    // component:AdminLayoutComponent
-    component: AppLayoutComponent,
-  },
+  // {
+  //   path: '',
+  //   // component:AdminLayoutComponent
+  //   component: AppLayoutComponent,
+  // },
   {
     path: 'employees',
     component: EmployeesListComponent
   },
   {
     path: 'login',
+    component: LoginFormComponent
+  },
+  {
+    path: '',
     component: LoginFormComponent
   },
   {
@@ -51,7 +56,15 @@ const routes: Routes = [
   {
     path: 'search-register-accounts',
     component: SearchRegisterAcountsComponent
-  }
+  },
+  {
+    path: 'dashboard',
+    component: UserDashboardComponent
+  },
+  // {
+  //   path: '',
+  //   component: UserDashboardComponent
+  // }
 ];
 
 @NgModule({

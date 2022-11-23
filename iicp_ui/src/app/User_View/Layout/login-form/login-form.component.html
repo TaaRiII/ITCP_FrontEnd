@@ -20,17 +20,67 @@
                                 <div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
                                     <hr>
                                 </div>
-                                <div class="form-body">
-                                    <form class="row g-3">
+                                <div class="form-body" >
+                                    <form class="row g-3" #form="ngForm"   (ngSubmit)="onSubmit()">
+                                        <!-- <form   class="row g-3" 
+                                         *ngIf="!isLoggedIn"
+                                        name="form"
+                                        (ngSubmit)="f.form.valid && onSubmit()"
+                                        #f="ngForm"
+                                        novalidate 
+                                        > -->
+                                     
                                         <div class="col-12">
-                                            <label for="inputEmailAddress" class="form-label">Email Address</label>
-                                            <input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address">
+                                            <div class="form-group">
+                                            <label for="inputEmailAddress" class="form-label">Enter Username </label>
+                                            <input type="email"
+                                             class="form-control" 
+                                             id="inputEmailAddress"
+                                              placeholder="Username Address"
+                                            class="form-control" 
+                                            name="username"
+                                            [(ngModel)]="User.username"
+                                            required
+                                            >
+                                            <!-- <input type="text" class="form-control" id="inputEmailAddress" placeholder="Full Name" name="name" [(ngModel)]="User.username"> -->
+                                            <!-- <div *ngIf="User.username['username'].errors" class="invalid-feedback">
+                                                <div *ngIf="User.username['username'].errors?.['required']">User Name is required</div>
+                                            </div> -->
+                                            <!-- <div
+                                            class="alert alert-danger"
+                                            role="alert"
+                                            *ngIf="User.username.invalid"
+                                          >
+                                            Username is required!
+                                          </div> -->
+                                        </div>
                                         </div>
                                         <div class="col-12">
-                                            <label for="inputChoosePassword" class="form-label">Enter Password</label>
-                                            <div class="input-group" id="show_hide_password">
-                                                <input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
+                                           
+
+                                            <div class="form-group">
+                                                <label for="inputChoosePassword" class="form-label">Enter Password</label>
+                                                <div class="input-group" id="show_hide_password">
+                                                <input type="password"
+                                                 class="form-control border-end-0" 
+                                                 name="password"
+                                                 [(ngModel)]="User.password"
+                                                 required
+                                                 />
+                                                <!-- <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                                                    <div *ngIf="f['password'].errors?.['required']">Password is required</div>
+                                                </div> -->
+                                                <!-- <div
+                                                class="alert alert-danger"
+                                                role="alert"
+                                                *ngIf="password.invalid"
+                                              >
+                                                <div *ngIf="password.errors?.['required']">Password is required</div>
+                                                </div> -->
                                             </div>
+                                        </div>
+
+
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-check form-switch">
@@ -47,10 +97,30 @@
                                         <div class="col-12">
                                             <div class="d-grid">
                                                 <!-- <button type="submit" class="btn btn-primary rg-bt"><i class="bx bxs-lock-open"></i>Sign in</button> -->
-                                                <a routerLink="/" class="btn btn-primary rg-bt"><i class="bx bxs-lock-open"></i>Sign in</a>
+                                                <!-- <a routerLink="/" class="btn btn-primary rg-bt"><i class="bx bxs-lock-open"></i>Sign in</a> -->
+                                                <button  class="btn btn-primary rg-bt">
+                                                    
+                                                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+                                                    <i class="bx bxs-lock-open"></i>Sign in
+                                                </button>
+                                                <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div> -->
+                                                
                                             </div>
                                         </div>
                                     </form>
+                                    <div class="alert alert-success" *ngIf="isLoggedIn">
+                                        Logged in Success {{ roles }}.
+                                      </div>
+                                
+                                        <div
+                                          class="alert alert-danger"
+                                          role="alert"
+                                          *ngIf="isLoginFailed"
+                                        >
+                                          Login failed: {{ errorMessage }}
+                                        </div>
+                                   
+                                   
                                 </div>
                             </div>
                         </div>
