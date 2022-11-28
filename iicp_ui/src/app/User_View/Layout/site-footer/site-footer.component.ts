@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }  from "@angular/router";
+
 
 @Component({
   selector: 'app-site-footer',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteFooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router){}
+
 
   ngOnInit(): void {
   }

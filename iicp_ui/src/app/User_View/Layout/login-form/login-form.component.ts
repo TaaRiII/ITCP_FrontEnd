@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { isThisTypeNode } from 'typescript';
 // import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { first } from 'rxjs/operators';
 import { user} from '../../../Models/user.model'
@@ -30,11 +31,12 @@ export class LoginFormComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private tokenStorage: TokenStorageService
+    private tokenStorage: TokenStorageService,
+    private router: Router
   ) {
 
-    // redirect to home if already logged in
-  //   if (this.authenticationService.currentUserValue) { 
+   //redirect to home if already logged in
+  //   if (this.authenticationService.currentUser) { 
   //     this.router.navigate(['/']);
   // }
    }
@@ -66,10 +68,10 @@ export class LoginFormComponent implements OnInit {
                 this.isLoggedIn = true;
                 this.roles = this.tokenStorage.getUser().roles;
                 // this.reloadPage();
-
+                this.router.navigate(['/dashboard']);
       }
     });
-    
+    //return this.router.navigate(['/dashboard']);
     // .subscribe(
     
     //   data => {
@@ -94,6 +96,13 @@ export class LoginFormComponent implements OnInit {
   reloadPage() {
     window.location.reload();
   }
+  // returnScreen(){
+  //   // console.log("start");
+  //   // this.router.navigate(["/dashboard"]);
+  //   // console.log("End");
+  //   // window.location.reload();
+  //   this.router.createUrlTree(['/dashboard']);
+  // }
 }
 
 

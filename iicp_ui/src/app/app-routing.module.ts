@@ -22,7 +22,7 @@ const routes: Routes = [
   //   component: AppLayoutComponent,
   // },
   {
-    path: 'employees',
+    path: 'employees',canActivate:[AuthGuard],
     component: EmployeesListComponent
   },
   {
@@ -38,27 +38,27 @@ const routes: Routes = [
     component: SignupFormComponent
   },
   {
-    path: 'admin',
+    path: 'admin',canActivate:[AuthGuard],
     component: AdminLayoutComponent
   },
   {
-    path: 'user-form',
+    path: 'user-form',canActivate:[AuthGuard],
     component: FormComponent
   },
   {
-    path: 'renew-certificate',
+    path: 'renew-certificate',canActivate:[AuthGuard],
     component: RenewCertificateComponent
   },
   {
-    path: 'user-profile',
+    path: 'user-profile',canActivate:[AuthGuard],
     component: UserProfileComponent
   },
   {
-    path: 'search-register-accounts',
+    path: 'search-register-accounts',canActivate:[AuthGuard],
     component: SearchRegisterAcountsComponent
   },
   {
-    path: 'dashboard',
+    path: 'dashboard',canActivate:[AuthGuard],
     component: UserDashboardComponent
   },
   // {

@@ -10,11 +10,10 @@ import {TokenStorageService} from '../app/Services/token-storage.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
   
   title = 'FullStack.UI';
-  status: boolean = this.tokenStorage.getToken() != null ? true : false;
+  //status: boolean = this.tokenStorage.getToken() != null ? true : false;
   currentUser: user;
   constructor(
     private router: Router,
