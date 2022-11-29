@@ -29,7 +29,11 @@
                                 </a>
                             </li>
                             <li>
-                                <a routerLink="/user-form" >
+                                <a routerLink="/user-form"  >
+                                      <!-- <a routerLink="/user-form"   aria-expanded="true"> -->
+                                <!-- <a [routerLink] = "['/user-form']"  (click)="test()"> -->
+                                    <!-- <a [routerLink] = "['/user-form']"  fragment="step-1"> -->
+                                <!-- <a [fragment]="step-1" [routerLink]="['/user-form']"> -->
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Apply For Certificate</div>
@@ -69,16 +73,30 @@
                                 <a routerLink="/renew-certificate" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
-                                    <div class="menu-title">Renewal Of Certificates </div>
+                                    <div class="menu-title">Certificate Renewal </div>
                                 </a>
                             </li>
                             <li>
+                                <a routerLink="/my-certificate" >
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">My Certificate</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="/company-profile" >
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">My Company Profile</div>
+                                </a>
+                            </li>
+                            <!-- <li>
                                 <a routerLink="/search-register-accounts" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Search Registered Accounts </div>
                                 </a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a routerLink="/" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>

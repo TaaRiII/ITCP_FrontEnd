@@ -32,6 +32,8 @@ import { AppLayoutModule } from './User_View/Layout/app-layout/app-layout.compon
 
  import { JwtInterceptor } from './Helpers/jwt.interceptor';
  import {ErrorInterceptor } from './Helpers/error.interceptor';
+import { MyCompanyProfileComponent } from './User_View/Layout/my-company-profile/my-company-profile.component';
+import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-certificate.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { AppLayoutModule } from './User_View/Layout/app-layout/app-layout.compon
     RenewCertificateComponent,
     UserProfileComponent,
     SearchRegisterAcountsComponent,
+    MyCompanyProfileComponent,
+    MyCertificateComponent,
     
    
   ],

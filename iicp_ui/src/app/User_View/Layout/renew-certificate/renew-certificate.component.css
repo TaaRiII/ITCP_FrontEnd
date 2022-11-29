@@ -1,0 +1,13 @@
+.breadcrumb-title {
+    color: black;
+}
+.breadcrumb-item {
+    color: black;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+}

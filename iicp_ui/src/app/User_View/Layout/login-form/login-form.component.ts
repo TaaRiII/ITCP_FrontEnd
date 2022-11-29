@@ -93,9 +93,9 @@ export class LoginFormComponent implements OnInit {
     // );
   }
 
-  reloadPage() {
-    window.location.reload();
-  }
+  // reloadPage() {
+  //   window.location.reload();
+  // }
   // returnScreen(){
   //   // console.log("start");
   //   // this.router.navigate(["/dashboard"]);

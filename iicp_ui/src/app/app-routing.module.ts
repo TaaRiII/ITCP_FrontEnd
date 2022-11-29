@@ -10,6 +10,9 @@ import { FormComponent } from './User_View/Layout/form/form.component';
 import { RenewCertificateComponent } from './User_View/Layout/renew-certificate/renew-certificate.component';
 import { UserProfileComponent } from './User_View/Layout/user-profile/user-profile.component';
 import { SearchRegisterAcountsComponent } from './User_View/Layout/search-register-acounts/search-register-acounts.component';
+import { MyCompanyProfileComponent } from './User_View/Layout/my-company-profile/my-company-profile.component';
+import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-certificate.component';
+
 
 import { AuthGuard } from './Helpers/auth.guard';
 
@@ -60,6 +63,14 @@ const routes: Routes = [
   {
     path: 'dashboard',canActivate:[AuthGuard],
     component: UserDashboardComponent
+  },
+  {
+    path: 'company-profile',canActivate:[AuthGuard],
+    component: MyCompanyProfileComponent
+  },
+  {
+    path: 'my-certificate',canActivate:[AuthGuard],
+    component: MyCertificateComponent
   },
   // {
   //   path: '',

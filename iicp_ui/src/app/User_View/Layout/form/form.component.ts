@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements AfterViewInit  {
 
-  constructor() { }
+  // constructor(nativeElement:T) { }
+  // constructor() { }
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
+  // }
+  @ViewChild('step1') step1: ElementRef;
+
+  ngAfterViewInit() {
+      console.log(this.step1.nativeElement.innerHTML);
   }
 
 }

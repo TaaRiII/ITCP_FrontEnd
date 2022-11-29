@@ -338,7 +338,12 @@
                     <li>
                         <div class="dropdown-divider mb-0"></div>
                     </li>
-                    <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                    <li>
+                <button class="dropdown-item" (click)="logoutUser()">
+                        <i class="bx bx-log-out-circle">
+                        </i><span>Logout</span>
+                </button>
+                <!-- <button (click)='logout()'>log out</button> -->
                     </li>
                 </ul>
             </div>
