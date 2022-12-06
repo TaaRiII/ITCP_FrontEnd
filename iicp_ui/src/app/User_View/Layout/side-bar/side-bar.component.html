@@ -1,5 +1,5 @@
 <div class="sidebar-wrapper" data-simplebar="init"
-*ngIf="router.url !== '/login' && router.url !== '/register'"
+    *ngIf="router.url !== '/login' && router.url !== '/register'  && router.url !== '/' && router.url !=='/forget-password'"
 >
     <div class="simplebar-wrapper" style="margin: 0px;">
         <div class="simplebar-height-auto-observer-wrapper">
@@ -98,7 +98,7 @@
                                 </a>
                             </li> -->
                             <li>
-                                <a routerLink="/" >
+                                <a>
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Setting </div>

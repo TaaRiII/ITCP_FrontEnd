@@ -34,6 +34,8 @@ import { AppLayoutModule } from './User_View/Layout/app-layout/app-layout.compon
  import {ErrorInterceptor } from './Helpers/error.interceptor';
 import { MyCompanyProfileComponent } from './User_View/Layout/my-company-profile/my-company-profile.component';
 import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-certificate.component';
+import { LandingPageComponent } from './User_View/Layout/landing-page/landing-page.component';
+import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-cer
     SearchRegisterAcountsComponent,
     MyCompanyProfileComponent,
     MyCertificateComponent,
+    LandingPageComponent,
+    ForgetPasswordComponent,
     
    
   ],

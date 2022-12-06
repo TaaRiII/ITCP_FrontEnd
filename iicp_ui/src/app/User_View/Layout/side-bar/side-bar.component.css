@@ -1,5 +1,12 @@
+/* .simplebar-mask{
+    background-color: #21834b;
+} */
 .simplebar-mask{
-    background-color: #0a3255;
+    background-image: url(../../../Images/bg3.png);
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
 }
 .sidebar-wrapper .metismenu a{
 color: #fff;

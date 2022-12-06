@@ -1,0 +1,22 @@
+.topbar{
+background-color: #21834b;
+}
+.topbar{
+    background-image: url(../../../Images/bg3.png);
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+.topbar .navbar .navbar-nav .nav-link{
+    color: #fff;
+}
+.user-info .user-name {
+    color: #fff;
+}
+.user-info .designattion {
+    color:#fff;
+}
+.sidebar-header{
+background: #014201 !important;
+}

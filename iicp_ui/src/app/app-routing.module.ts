@@ -12,6 +12,9 @@ import { UserProfileComponent } from './User_View/Layout/user-profile/user-profi
 import { SearchRegisterAcountsComponent } from './User_View/Layout/search-register-acounts/search-register-acounts.component';
 import { MyCompanyProfileComponent } from './User_View/Layout/my-company-profile/my-company-profile.component';
 import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-certificate.component';
+import { LandingPageComponent } from './User_View/Layout/landing-page/landing-page.component';
+import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forget-password.component';
+
 
 
 import { AuthGuard } from './Helpers/auth.guard';
@@ -34,12 +37,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: LoginFormComponent
+    component: LandingPageComponent
   },
   {
     path: 'register',
     component: SignupFormComponent
   },
+
+  {
+    path: 'forget-password',
+    component: ForgetPasswordComponent
+  },
+  
   {
     path: 'admin',canActivate:[AuthGuard],
     component: AdminLayoutComponent

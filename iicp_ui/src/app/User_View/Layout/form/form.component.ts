@@ -1,21 +1,42 @@
 import { Component, OnInit ,AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { GeneralInformation } from 'src/app/Models/generalInfo.model';
+import { GeneralInformationService } from 'src/app/Services/general-information.service';
+
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements AfterViewInit  {
+export class FormComponent implements OnInit  {
 
-  // constructor(nativeElement:T) { }
+  GeneralInformationData: GeneralInformation = {
+    url:"",
+    primaryContactPersonName: "",
+    primaryContactPersonMobile: 0,
+    telPhone:0,
+    coporateHeadQuater: "",
+    state:0,
+    officeLocation:"",
+    rcNumber:0,
+    nameOfCEO:""
+  };
   // constructor() { }
 
-  // ngOnInit(): void {
-  // }
-  @ViewChild('step1') step1: ElementRef;
+  constructor(private generalInformationService: GeneralInformationService) { }
 
-  ngAfterViewInit() {
-      console.log(this.step1.nativeElement.innerHTML);
+  ngOnInit() : void {
+    
+      // console.log(this.step1.nativeElement.innerHTML);
+  }
+  GeneralInfo(){
+    this.generalInformationService.GeneralInfo(this.GeneralInformationData)
+    .subscribe({
+      next: (GeneralInformation) => {
+        console.log(GeneralInformation);
+        
+      }
+    });
   }
 
 }
