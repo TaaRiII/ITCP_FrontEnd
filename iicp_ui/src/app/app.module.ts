@@ -36,6 +36,7 @@ import { MyCompanyProfileComponent } from './User_View/Layout/my-company-profile
 import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-certificate.component';
 import { LandingPageComponent } from './User_View/Layout/landing-page/landing-page.component';
 import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forget-password.component';
+import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forg
     MyCertificateComponent,
     LandingPageComponent,
     ForgetPasswordComponent,
+    CreatePasswordComponent,
     
    
   ],

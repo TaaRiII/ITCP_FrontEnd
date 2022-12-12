@@ -18,6 +18,7 @@ import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forg
 
 
 import { AuthGuard } from './Helpers/auth.guard';
+import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
 
 
 
@@ -80,6 +81,10 @@ const routes: Routes = [
   {
     path: 'my-certificate',canActivate:[AuthGuard],
     component: MyCertificateComponent
+  },
+  {
+    path: 'create-password',
+    component: CreatePasswordComponent
   },
   // {
   //   path: '',
