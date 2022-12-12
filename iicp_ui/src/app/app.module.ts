@@ -38,6 +38,7 @@ import { LandingPageComponent } from './User_View/Layout/landing-page/landing-pa
 import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forget-password.component';
 import { TestRenewalComponent } from './User_View/Layout/test-renewal/test-renewal.component';
 import { TestOurCertificateComponent } from './User_View/Layout/test-our-certificate/test-our-certificate.component';
+import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { TestOurCertificateComponent } from './User_View/Layout/test-our-certifi
     ForgetPasswordComponent,
     TestRenewalComponent,
     TestOurCertificateComponent,
+    CreatePasswordComponent,
     
    
   ],
