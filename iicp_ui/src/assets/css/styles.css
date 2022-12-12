@@ -88,11 +88,11 @@ hr.divider-light {
     color: #fff;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color:rgb(0 255 166 / 99%);
+    color:rgba(255, 255, 255, 0.99);
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
+    color: #49cc90;
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;

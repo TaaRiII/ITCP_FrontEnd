@@ -93,7 +93,7 @@ a {
 	left: 250px;
 	right: 0;
 	height: 60px;
-	/* background: #fff; */
+	background: #fff;
 	border-bottom: 1px solid rgb(228 228 228 / 0%);
 	z-index: 10;
 	box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important

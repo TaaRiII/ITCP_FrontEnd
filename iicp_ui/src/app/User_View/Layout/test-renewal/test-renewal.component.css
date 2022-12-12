@@ -1,12 +1,15 @@
-
 .breadcrumb-title {
     color: black;
 }
 .breadcrumb-item {
     color: black;
 }
-.color{
-    opacity: 0.3;
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
 }
 .card{
     background-color: #fff0;
@@ -15,5 +18,4 @@
     --bs-table-bg: #fff0;
 }
 .table-light{
-    font-size: 16px;
-}
+    font-size: 16px}

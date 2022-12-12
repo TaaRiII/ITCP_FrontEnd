@@ -1,13 +1,13 @@
 .topbar{
 background-color: #21834b;
 }
-.topbar{
+/* .topbar{
     background-image: url(../../../Images/bg3.png);
-    /* background-size: cover;
+     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; */
-}
+    background-attachment: fixed; 
+} */
 .topbar .navbar .navbar-nav .nav-link{
     color: #fff;
 }

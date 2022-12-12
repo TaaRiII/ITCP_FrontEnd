@@ -14,7 +14,8 @@ import { MyCompanyProfileComponent } from './User_View/Layout/my-company-profile
 import { MyCertificateComponent } from './User_View/Layout/my-certificate/my-certificate.component';
 import { LandingPageComponent } from './User_View/Layout/landing-page/landing-page.component';
 import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forget-password.component';
-
+import { TestRenewalComponent } from './User_View/Layout/test-renewal/test-renewal.component';
+import { TestOurCertificateComponent } from './User_View/Layout/test-our-certificate/test-our-certificate.component';
 
 
 import { AuthGuard } from './Helpers/auth.guard';
@@ -80,6 +81,14 @@ const routes: Routes = [
   {
     path: 'my-certificate',canActivate:[AuthGuard],
     component: MyCertificateComponent
+  },
+  {
+    path: 'renewal-certificate',canActivate:[AuthGuard],
+    component: TestRenewalComponent
+  },
+  {
+    path: 'our-certificate',canActivate:[AuthGuard],
+    component: TestOurCertificateComponent
   },
   // {
   //   path: '',

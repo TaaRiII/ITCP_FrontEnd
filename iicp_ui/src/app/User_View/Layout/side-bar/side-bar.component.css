@@ -1,13 +1,22 @@
-/* .simplebar-mask{
-    background-color: #21834b;
-} */
 .simplebar-mask{
+    background-color: #21834b;
+}
+/* .simplebar-mask{
     background-image: url(../../../Images/bg3.png);
-    /* background-size: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; */
-}
-.sidebar-wrapper .metismenu a{
+    background-attachment: fixed; 
+} */
+ .menu-title{
 color: #fff;
+}
+.parent-icon{
+    color: #fff;
+}
+
+.sidebar-wrapper .metismenu .mm-active>a, .sidebar-wrapper .metismenu a:active, .sidebar-wrapper .metismenu a:focus, .sidebar-wrapper .metismenu a:hover {
+    color: #014201 !important;
+    text-decoration: none;
+    background: #072f05;
 }

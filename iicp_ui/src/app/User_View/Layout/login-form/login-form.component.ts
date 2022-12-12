@@ -69,6 +69,7 @@ export class LoginFormComponent implements OnInit {
                 this.roles = this.tokenStorage.getUser().roles;
                 // this.reloadPage();
                 this.router.navigate(['/dashboard']);
+                // window.location.reload();
       }
     });
     //return this.router.navigate(['/dashboard']);

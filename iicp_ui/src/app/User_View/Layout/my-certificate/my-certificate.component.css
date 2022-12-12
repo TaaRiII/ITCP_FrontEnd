@@ -4,3 +4,11 @@
 .breadcrumb-item {
     color: black;
 }
+.card{
+    background-color: #fff0;
+}
+.table-light {
+    --bs-table-bg: #fff0;
+}
+.table-light{
+    font-size: 16px}

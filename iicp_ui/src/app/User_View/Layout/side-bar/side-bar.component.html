@@ -1,3 +1,4 @@
+
 <div class="sidebar-wrapper" data-simplebar="init"
     *ngIf="router.url !== '/login' && router.url !== '/register'  && router.url !== '/' && router.url !=='/forget-password'"
 >
@@ -14,14 +15,14 @@
                                 <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
                             </div>
                             <div>
-                                <h4 class="logo-text">IICP</h4>
+                                <h4 class="logo-text">IT PORTAL</h4>
                             </div>
                             <div class="toggle-icon ms-auto"><i class="bx bx-arrow-to-left"></i>
                             </div>
                         </div>
                         <!--navigation-->
                         <ul class="metismenu mm-show" id="menu">
-                            <li class="mm-active">
+                            <li >
                                 <a routerLink="/dashboard"  aria-expanded="true">
                                     <div class="parent-icon"><i class="bx bx-home-circle"></i>
                                     </div>
@@ -36,7 +37,7 @@
                                 <!-- <a [fragment]="step-1" [routerLink]="['/user-form']"> -->
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
-                                    <div class="menu-title">Apply For Certificate</div>
+                                    <div class="menu-title">All Projects</div>
                                 </a>
                                 <!-- <ul class="mm-collapse">
                                     <li> <a href="app-emailbox.html"><i class="bx bx-right-arrow-alt"></i>Email</a>
@@ -70,24 +71,45 @@
                                 </a>
                             </li> -->
                             <li>
+                                <a routerLink="/search-register-accounts">
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">Project In Progress </div>
+                                </a>
+                            </li>
+                            <li>
                                 <a routerLink="/renew-certificate" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
-                                    <div class="menu-title">Certificate Renewal </div>
+                                    <div class="menu-title">Submited Projects</div>
                                 </a>
                             </li>
                             <li>
                                 <a routerLink="/my-certificate" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
-                                    <div class="menu-title">My Certificate</div>
+                                    <div class="menu-title">Accepted Projects</div>
                                 </a>
                             </li>
                             <li>
                                 <a routerLink="/company-profile" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
-                                    <div class="menu-title">My Company Profile</div>
+                                    <div class="menu-title">Rejected Project</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="/renewal-certificate" >
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">Renewal Of Certificate</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="/our-certificate" >
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">Our Certificate</div>
                                 </a>
                             </li>
                             <!-- <li>
@@ -101,7 +123,7 @@
                                 <a>
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
-                                    <div class="menu-title">Setting </div>
+                                    <div class="menu-title">Reports </div>
                                 </a>
                             </li>
                         </ul>
