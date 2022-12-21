@@ -20,6 +20,7 @@ import { TestOurCertificateComponent } from './User_View/Layout/test-our-certifi
 
 import { AuthGuard } from './Helpers/auth.guard';
 import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
+import { ApplicationFormComponent } from './User_View/Layout/application-form/application-form.component';
 
 
 
@@ -87,12 +88,20 @@ const routes: Routes = [
     path: 'renewal-certificate',canActivate:[AuthGuard],
     component: TestRenewalComponent
   },
+  
   {
     path: 'our-certificate',canActivate:[AuthGuard],
     component: TestOurCertificateComponent},
+  
   {  path: 'create-password',
     component: CreatePasswordComponent
   },
+
+  {  path: 'application-form',
+    component: ApplicationFormComponent
+  },
+
+  
   // {
   //   path: '',
   //   component: UserDashboardComponent

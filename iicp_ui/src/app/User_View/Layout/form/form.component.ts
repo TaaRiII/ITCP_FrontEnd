@@ -3,6 +3,8 @@ import { GeneralInformation } from 'src/app/Models/generalInfo.model';
 import { GeneralInformationService } from 'src/app/Services/general-information.service';
 
 
+
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',

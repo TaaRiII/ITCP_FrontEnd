@@ -39,6 +39,12 @@ import { ForgetPasswordComponent } from './User_View/Layout/forget-password/forg
 import { TestRenewalComponent } from './User_View/Layout/test-renewal/test-renewal.component';
 import { TestOurCertificateComponent } from './User_View/Layout/test-our-certificate/test-our-certificate.component';
 import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
+import { ApplicationFormComponent } from './User_View/Layout/application-form/application-form.component';
+import { DxTabsModule, DxSelectBoxModule,  DxDataGridComponent,
+  DxDataGridModule,
+  DxCheckBoxModule, } from 'devextreme-angular';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -67,6 +73,7 @@ import { CreatePasswordComponent } from './User_View/Layout/create-password/crea
     TestRenewalComponent,
     TestOurCertificateComponent,
     CreatePasswordComponent,
+    ApplicationFormComponent,
     
    
   ],
@@ -78,6 +85,11 @@ import { CreatePasswordComponent } from './User_View/Layout/create-password/crea
     AppLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    DxTabsModule, 
+    DxSelectBoxModule,
+  DxDataGridModule,
+  DxCheckBoxModule,
+  Ng2SearchPipeModule,
   ],
   // providers: [],
 
@@ -91,3 +103,4 @@ import { CreatePasswordComponent } from './User_View/Layout/create-password/crea
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

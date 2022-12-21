@@ -1,4 +1,4 @@
-<header   *ngIf="router.url !== '/login' && router.url !== '/register'  && router.url !== '/' && router.url !=='/forget-password'">
+<header   *ngIf="router.url !== '/login' && router.url !== '/register'  && router.url !== '/' && router.url !=='/forget-password'&& !router.url.includes('/create-password')">
     <div class="topbar d-flex align-items-center">
         <nav class="navbar navbar-expand">
             <div class="mobile-toggle-menu"><i class="bx bx-menu"></i>

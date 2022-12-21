@@ -1,0 +1,56 @@
+::ng-deep .content {
+    text-align: justify;
+    margin-top: 25px;
+  }
+  
+  ::ng-deep #longtabs {
+    margin-top: 20px;
+  }
+  
+  ::ng-deep #scrolledtabs {
+    margin-top: 20px;
+  }
+  
+  ::ng-deep #tabs {
+    margin-top: 60px;
+  }
+  
+  ::ng-deep .caption {
+    font-size: 16px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+  }
+  
+  ::ng-deep .left-aligned {
+    text-align: left;
+  }
+  
+  .card{
+    background-color: #ffffff66;
+  }
+  .form-control {
+    background-color: #f3faf3;
+  }
+  .form-control:focus {
+    background-color: #f3faf3;
+    box-shadow: 0 0 0 0.25rem rgb(13 253 67 / 25%);
+  }
+  .form-select{
+    background-color: #f3faf3;
+  }
+  #tabs {
+    margin-top: 25px;
+}
+.form-label{
+  font-weight: bold;
+}
+.form-select:focus {
+  
+  background-color: #f3faf3;
+  border-color: #17a00e;
+    box-shadow: 0 0 0 0.25rem rgb(13 253 67 / 25%);
+}
+.my-button{
+  padding: 0px 3px;
+  border-width: 0px;
+}

@@ -16,3 +16,28 @@
 .table-light{
     font-size: 16px;
 }
+ 
+.bg-card-one{
+    background-color: #56a69c;
+}
+
+
+.bg-card-two{
+    background-color: #29878c;
+}
+.bg-card-three{
+    background-color: #007a6b;
+}
+.bg-card-four{
+    background-color: brown;
+}
+.bg-card-five{
+    background-color: #490909;
+}
+.bg-card-six{
+    background-color: #034146;
+}
+.search-hero{
+text-align: end;
+}
+

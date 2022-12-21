@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, ActivatedRoute } from '@angular/router';
+import {  ActivatedRoute,Router } from '@angular/router';
 import { Password } from 'src/app/Models/password.model';
 import { ForgetService } from 'src/app/Services/forget.service';
 @Component({
@@ -13,7 +13,12 @@ export class CreatePasswordComponent implements OnInit {
     passwordagain:"",
   };
   token:string;
-  constructor(private forgetService: ForgetService, private route: ActivatedRoute) { }
+  constructor(
+    private forgetService: ForgetService, 
+    private route: ActivatedRoute,
+    private router : Router
+    
+    ) { }
 
   ngOnInit(): void {
     this.route.queryParams
@@ -28,6 +33,7 @@ export class CreatePasswordComponent implements OnInit {
       next: (login) => {
         console.log("End")
         console.log(login);
+        this.router.navigate(['/login']);
       }
     });
   }

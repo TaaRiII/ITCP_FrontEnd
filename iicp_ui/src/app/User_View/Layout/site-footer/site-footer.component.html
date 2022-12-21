@@ -1,5 +1,5 @@
 <footer class="footer shadow-sm  p-2 text-center fixed-bottom"
-*ngIf="router.url !== '/login' && router.url !== '/register'  && router.url !== '/' && router.url !=='/forget-password'"
+*ngIf="router.url !== '/login' && router.url !== '/register'  && router.url !== '/' && router.url !=='/forget-password' && !router.url.includes('/create-password') "
 >
     <p class="mb-0">Copyright © 2021. All right reserved.</p>
 </footer>
