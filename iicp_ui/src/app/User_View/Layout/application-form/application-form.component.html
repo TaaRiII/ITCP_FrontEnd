@@ -210,9 +210,8 @@
                                          
                                           
                                           
-                                            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-                                                <div class="col-lg-12 pt-2"
-                                                       >
+                                            <form [formGroup]="productForm" (ngSubmit)="ProjectScopeApi()">
+                                                <div class="col-lg-12 pt-2">
                                                         <div class="row">
                                                             <div class="col-lg-12 pb-1">
                                                                    <h6 class="mb-0 text-secondary ">Deliverables</h6>
@@ -220,7 +219,7 @@
                                                         </div>
                                                         <textarea class="form-control" formControlName="qty"
                                                             id="projectObjectives" id="" rows="2"
-                                                            placeholder=""></textarea>
+                                                            placeholder="" name="Deliverable"  [(ngModel)]="projectModel.Deliverable"></textarea>
                                                     </div>
                                                 <div class="row" formArrayName="quantities">
                                                       
@@ -241,7 +240,7 @@
                                                         </div>
                                                         <textarea class="form-control" formControlName="qty"
                                                             id="projectObjectives" id="" rows="2"
-                                                            placeholder=""></textarea>
+                                                            placeholder="" ></textarea>
                                                     </div>
                                                 </div>
 
@@ -274,7 +273,7 @@
                                                         </div>
                                                         <textarea class="form-control" formControlName="qty"
                                                             id="projectObjectives" id="" rows="2"
-                                                            placeholder=""></textarea>
+                                                            placeholder="" name="Milestone"  [(ngModel)]="projectModel.Milestone"></textarea>
                                                     </div>
                                                       
                                                     <div class="col-lg-12 pt-2"

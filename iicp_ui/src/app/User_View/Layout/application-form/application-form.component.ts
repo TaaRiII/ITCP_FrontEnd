@@ -26,7 +26,7 @@ export class ApplicationFormComponent  {
 //   this.discountType = new FormGroup({
 //     single: new FormControl()
 // });
-
+ProjectId: number = 0;
 projectModel : ProjectModel = {
   MDA: "",
   BudgetCode:"",
@@ -35,13 +35,30 @@ projectModel : ProjectModel = {
   ProjectObjectives: "",
   ProjectDescription: "",
   ProjectClassification: "",
+  Deliverable: "",
+  Milestone:"",
 }
 
 ProjectModelApi(){
   this.applicationFormService.ProjectModelApi(this.projectModel)
   .subscribe({
-    next: (ProjectModel) => {
-      console.log(ProjectModel);
+    next: (id: any) => {
+      console.log(id);
+      this.ProjectId = id;
+      console.log("This Project Id: " + this.ProjectId);
+    }
+  });
+}
+ProjectScopeApi(){
+  this.projectModel.ProjectId = this.ProjectId;
+  // this.projectModel.Deliverable = this.productForm.value;
+  console.log(this.projectModel);
+  this.applicationFormService.ProjectScopeApi(this.projectModel)
+  .subscribe({
+    next: (id: any) => {
+      // console.log(id);
+      // this.ProjectId = id;
+      // console.log("This Project Id: " + this.ProjectId);
     }
   });
 }
@@ -148,6 +165,7 @@ console.log(aTag[i]);
   selectTab2() { 
     this.tabContent = this.tabs[2].content;
     this.ChangeTab(2);
+    this.ProjectScopeApi();
   }
 
   
