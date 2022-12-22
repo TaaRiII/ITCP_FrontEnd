@@ -1,0 +1,760 @@
+
+        <!--breadcrumb-->
+        <!-- <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">APPLICATION FORM</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Application Form</li>
+                    </ol>
+                </nav>
+            </div>
+        </div> -->
+        <!--end breadcrumb-->
+        <div class="row ">
+
+            <div class="col-lg-12">
+               
+                <div class="card">
+                    <div class="card-body">
+
+                        <!-- <div id="longtabs">
+                            <div class="caption">Tabs</div>
+                            <dx-tabs [dataSource]="longtabs"
+                            [selectedIndex]="0"
+                            (onItemClick)="selectTab($event)"
+                            ></dx-tabs>
+                          </div> -->
+                        <!-- <div id="scrolledtabs">
+                            <div class="caption">Tabs with Overflow</div>
+                            <dx-tabs
+                              [dataSource]="longtabs"
+                              [width]="300"
+                              [scrollByContent]="true"
+                              [showNavButtons]="true"
+                            ></dx-tabs>
+                          </div> -->
+                        <div id="tabs">
+                            <!-- <div class="caption">API</div> -->
+                            <dx-tabs #apiTabs [dataSource]="tabs" [selectedIndex]="0" (onItemClick)="selectTab($event)">
+
+                            </dx-tabs>
+                            <div class="content dx-fieldset">
+                                <!-- <div class="dx-field">
+                                <div class="dx-field-label">Selected index:</div>
+                                <div class="dx-field-value">
+                                  <dx-select-box
+                                    [dataSource]="tabs"
+                                    displayExpr="text"
+                                    valueExpr="id"
+                                    (onItemClick)="selectTab($event)"
+                                    [(value)]="apiTabs.selectedIndex"
+                                  ></dx-select-box>
+                                </div>
+                              </div> -->
+
+
+                                <!-- <div class="dx-field">
+                                <div class="dx-field-label">Selected content:</div>
+                                <div class="dx-field-value-static left-aligned">
+                                    <div *ngIf= "(tabContent == '1')">
+                                    <p > sad</p>
+                                    <p> adas</p>
+                                    <button type="button" 
+                                        class="btn-primary btn-lg"
+                                     (click)="selectTab1()" > next</button>
+                                </div>
+                                <div *ngIf= "(tabContent == '2')">
+                                    <h1 >dasdasdasdasdas</h1>
+                                    <p> asdasdasdasdasd</p>
+                                </div> -->
+
+                                <!-- <button *ngIf="(item.data.type == 1)">{{item.data.name}}</button> -->
+                                <!-- {{ tabContent }} -->
+                                <!-- </div>
+                              </div> -->
+
+                                <div class="dx-field" *ngIf="(tabContent == '1')">
+                                    <div class="card border-top border-0 border-4 border-success">
+                                        <div class="card-body p-5">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card-title d-flex align-items-center">
+    
+                                                        <h5 class="mb-0 text-success">Edit Project Form </h5>
+                                                      
+                                                    </div>
+                                                </div>
+                                            <div class="col-lg-2 text-right">
+                                                <button type="button"
+                                                   class="btn btn-success px-3 radius-30" >   <i class='bx bx-edit me-0'></i>
+                                                   Edit  </button>
+                                           </div>
+                                           
+                                            </div>
+                                            <hr>
+
+                                            <form class="row" #form="ngForm" (ngSubmit)="ProjectModelApi()" >
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-md-4 pt-2">
+                                                            <label for="projectClassification " class="form-label">
+                                                                Select MDA </label>
+                                                            <select id="projectClassification " class="form-select" name="MDA" [(ngModel)]="projectModel.MDA">
+                                                                <option selected="">Please Select MDA </option>
+                                                                <option value="1">MTest 1</option>
+                                                                <option value="2">MTest 2</option>
+                                                                <option value="3">MTest 3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-4 pt-2">
+                                                            <label for="projectObjectives" class="form-label">Budget
+                                                                Code</label>
+                                                            <input type="text" class="form-control"
+                                                                id="projectObjectives" placeholder="Budget Code" name="BudgetCode" [(ngModel)]="projectModel.BudgetCode">
+                                                        </div>
+
+                                                        <div class="col-md-4 pt-2">
+                                                            <label for="projectClassification " class="form-label">
+                                                                Select MDA Secter </label>
+                                                            <select id="projectClassification " class="form-select" name="MDASector" [(ngModel)]="projectModel.MDASector">
+                                                                <option selected="">Please Select Secter </option>
+                                                                <option value="1">STest 1</option>
+                                                                <option value="2">STest 2</option>
+                                                                <option value="3">STest 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pt-2">
+                                                            <label for="projectName" class="form-label ">Project
+                                                                Name</label>
+                                                            <input type="text" class="form-control" id="projectName"
+                                                                placeholder="Enter Project Name" name="ProjectName" [(ngModel)]="projectModel.ProjectName">
+                                                        </div>
+                                                        <div class="col-md-12 pt-2">
+                                                            <label for="projectObjectives" class="form-label">Project
+                                                                Objectives</label>
+                                                            <input type="text" class="form-control"
+                                                                id="projectObjectives"
+                                                                placeholder="Enter Project Objectives"
+                                                                name="ProjectObjectives"
+                                                                [(ngModel)]="projectModel.ProjectObjectives"
+                                                                >
+                                                        </div>
+
+                                                        <div class="col-md-12 pt-3">
+                                                            <label for="projectClassification "
+                                                                class="form-label">Project Classification </label>
+                                                            <select id="projectClassification " class="form-select" name="ProjectClassification" [(ngModel)]="projectModel.ProjectClassification">
+                                                                <option selected="">Select Project Classification
+                                                                </option>
+                                                                <option>Hardware Project</option>
+                                                                <option>Software Project</option>
+                                                                <option>Networking Project</option>
+                                                                <option>Research, Development and Innovation Project
+                                                                </option>
+                                                                <option>Capacity Development (Training) program</option>
+                                                                <option>Others</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 ">
+                                                    <div class="row">
+
+                                                        <div class="col-md-12 pt-2">
+                                                            <label for="projectDescription" class="form-label ">Project
+                                                                Description</label>
+                                                            <textarea class="form-control" id="projectDescription"
+                                                                placeholder="Enter Project Description"
+                                                                rows="8"
+                                                                name="ProjectDescription"
+                                                                [(ngModel)]="projectModel.ProjectDescription"
+                                                                ></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="text-right pt-2">
+                                                    <button type="submit" (click)="selectTab1()"   class="btn btn-success px-5">Next</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dx-field" *ngIf="(tabContent == '2')">
+                                    <div class="card border-top border-0 border-4 border-success">
+                                        <div class="card-body p-5">
+                                            <div class="card-title d-flex align-items-center">
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+                                                <h5 class="mb-0 text-success">Project Scope </h5>
+                                            </div>
+                                            <hr>
+                                       
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="card-title d-flex align-items-center">
+                <h5 class="mb-0 text-dark"> Deliverables  </h5>
+            </div>
+                    </div>
+                <div class="col-lg-2 text-right">
+                    <button type="button" (click)="addQuantity()"
+                       class="btn btn-success px-3 radius-30" >Add
+                        <i class='bx bx-plus  me-0'> </i>
+                    </button>
+               </div>
+            </div>
+                                         
+                                          
+                                          
+                                            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                                                <div class="col-lg-12 pt-2"
+                                                       >
+                                                        <div class="row">
+                                                            <div class="col-lg-12 pb-1">
+                                                                   <h6 class="mb-0 text-secondary ">Deliverables</h6>
+                                                            </div>
+                                                        </div>
+                                                        <textarea class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" rows="2"
+                                                            placeholder=""></textarea>
+                                                    </div>
+                                                <div class="row" formArrayName="quantities">
+                                                      
+                                                    <div class="col-lg-12 pt-2"
+                                                        *ngFor="let quantity of quantities().controls;  index as i"
+                                                       >
+                                                        <div class="row pt-1" [formGroupName]="i">
+                                                            <div class="col-lg-10 pb-1">
+                                                                   <h6 class="mb-0 text-secondary ">Deliverables</h6>
+                                                            </div>
+                                                            <div class="col-lg-2">
+                                                                <div class=" text-right">
+                                                                    <button (click)="removeQuantity(i)"
+                                                                        class="btn-xs btn-danger my-button">    <i class='bx bxs-trash  me-0'></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <textarea class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" rows="2"
+                                                            placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+
+                                            <br/>
+                                            <br/>
+
+
+                                                <div class="row pb-1">
+                                                    <div class="col-lg-10 ">
+                                                        <div class="card-title d-flex align-items-center">
+                                                <h5 class="mb-0 text-dark"> Milestone  </h5>
+                                            </div>
+                                                    </div>
+                                                <div class="col-lg-2 text-right">
+                                                    <button type="button" (click)="addQuantity()"
+                                                       class="btn btn-success px-3 radius-30" >Add
+                                                        <i class='bx bx-plus  me-0'> </i>
+                                                    </button>
+                                               </div>
+                                            </div>
+                                            <hr>
+
+                                                <div class="row pt-1" formArrayName="quantities">
+                                                    <div class="col-lg-12 pt-2"
+                                                       >
+                                                        <div class="row">
+                                                            <div class="col-lg-12 pb-1">
+                                                                   <h6 class="mb-0 text-secondary ">Milestone</h6>
+                                                            </div>
+                                                        </div>
+                                                        <textarea class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" rows="2"
+                                                            placeholder=""></textarea>
+                                                    </div>
+                                                      
+                                                    <div class="col-lg-12 pt-2"
+                                                        *ngFor="let quantity of quantities().controls; let i=index"
+                                                        [formGroupName]="i">
+                                                        <div class="row">
+                                                            <div class="col-lg-10 pb-1">
+                                                                   <h6 class="mb-0 text-secondary ">Milestone</h6>
+                                                            </div>
+                                                            <div class="col-lg-2">
+                                                                <div class=" text-right">
+                                                                    <button (click)="removeQuantity(i)"
+                                                                        class="btn-sm btn-danger my-button ">    <i class='bx bxs-trash  me-0'></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        <textarea class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" rows="2"
+                                                            placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                                <!--       
+                <p>  
+                  <label for="name">Product Name:</label>  
+                  <input type="text" id="name" name="name" formControlName="name" class="form-control">  
+                </p>  
+                <table class="table table-bordered" formArrayName="quantities">  
+                  <tr>  
+                    <th colspan="2">Add Deliverables:</th>  
+                    <th width="150px">
+                        <button type="button" (click)="addQuantity()" class="btn btn-info">Add More</button>
+                    </th>  
+                  </tr>  
+                  <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">  
+                    <td>  
+                        Quantity :  
+                        <input type="text" formControlName="qty" class="form-control">  
+                    </td>  
+                
+
+                    <td>  
+                        <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>  
+                    </td>  
+                  </tr>  
+                </table>  
+                 
+                <button type="submit" class="btn btn-success">Submit</button>  
+                   -->
+                                    
+                   
+                                                <div class="text-right pt-2">
+                                                    <button type="submit" (click)="selectTab2()" class="btn btn-success px-5">Next</button>
+                                                </div>
+                                            </form>
+                                            {{this.productForm.value | json}}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="dx-field" *ngIf="(tabContent == '3')">
+                                    <div class="card border-top border-0 border-4 border-success">
+                                        <div class="card-body p-5">
+                                            <div class="card-title d-flex align-items-center">
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+                                                <h5 class="mb-0 text-success">Project Duration </h5>
+                                            </div>
+                                            <hr>
+
+                                            <form class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pt-2">
+                                                            <label for="projectClassification " class="form-label">
+                                                                Select Project Duration </label>
+                                                            <select id="projectClassification " class="form-select" (change)="selectChangeHandler($event)">
+                                                                <option selected="">Please Select Duration </option>
+                                                                <option value="1">Single phase </option>
+                                                                <option value="2">Two phase </option>
+                                                                <option value="3">Three phase </option>
+                                                            </select>
+                                                        </div>
+                                                        <!-- <h1><span>You selected: </span><b>{{selectedDay}}</b></h1> -->
+                                                        <div class="col-md-12 pt-2" *ngIf="(selectedDay =='1')">
+                                                        
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <label for="projectObjectives" class="form-label">To</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+    
+                                                               </div>
+                                                                  
+                                                       
+                                                        </div>
+                                                        <div class="col-md-12 pt-2" *ngIf="(selectedDay =='2')">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <label for="projectObjectives" class="form-label">To</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6 pt-2">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6 pt-2">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+    
+                                                               </div>
+                                                        </div>
+                                                        <div class="col-md-12 pt-2" *ngIf="(selectedDay =='3')">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <label for="projectObjectives" class="form-label">To</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6 pt-2">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6 pt-2">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6 pt-2">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+                                                                <div class="col-lg-6 pt-2">
+                                                                    <label for="projectObjectives" class="form-label">From</label>
+                                                                        <input type="date" class="form-control"
+                                                                        id="projectObjectives" placeholder="Budget Code">
+                                                                </div>
+    
+                                                               </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                
+                                                </div>
+                                     
+
+
+                                                <div class="text-right pt-2">
+                                                    <button type="submit" class="btn btn-success px-5" (click)="selectTab3()">Next</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dx-field" *ngIf="(tabContent == '4')">
+                                    <div class="card border-top border-0 border-4 border-success">
+                                        <div class="card-body p-5">
+                                            <div class="card-title d-flex align-items-center">
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+                                                <h5 class="mb-0 text-success">Project Cost </h5>
+                                            </div>
+                                            <hr>
+                                       
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+            
+                                         
+                                          
+                                          
+                                            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                                                <div class="col-lg-12 pt-2"
+                                                       >
+                                                       <div class="row pb-2">
+                                                        <div class="col-lg-10">
+                                                            <div class="card-title d-flex align-items-center">
+                                                    <h5 class="mb-0 text-dark"> Cost Breakdown   </h5>
+                                                </div>
+                                                        </div>
+                                                    <div class="col-lg-2 text-right">
+                                                        <button type="button" (click)="addQuantity()"
+                                                           class="btn btn-success px-3 radius-30 " >Add
+                                                            <i class='bx bx-plus  me-0'> </i>
+                                                        </button>
+                                                   </div>
+                                                </div>
+                                                        <input class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" 
+                                                            placeholder="">
+                                                    </div>
+                                                <div class="row" formArrayName="quantities">
+                                                      
+                                                    <div class="col-lg-6 pt-2"
+                                                        *ngFor="let quantity of quantities().controls;  index as i"
+                                                       >
+                                                        <div class="row pt-1" [formGroupName]="i">
+                                                            <div class="col-lg-10 pb-1">
+                                                                   <h6 class="mb-0 text-secondary ">Description</h6>
+                                                            </div>
+                                                            <div class="col-lg-2">
+                                                                <div class=" text-right">
+                                                                    <button (click)="removeQuantity(i)"
+                                                                        class="btn-xs btn-danger my-button">    <i class='bx bxs-trash  me-0'></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" 
+                                                            placeholder="">
+                                                    </div>
+                                                    <div class="col-lg-6 pt-2"
+                                                    *ngFor="let quantity of quantities().controls;  index as i"
+                                                   >
+                                                    <div class="row pt-1" [formGroupName]="i">
+                                                        <div class="col-lg-10 pb-1">
+                                                               <h6 class="mb-0 text-secondary ">Amount</h6>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <div class=" text-right">
+                                                                <button (click)="removeQuantity(i)"
+                                                                    class="btn-xs btn-danger my-button">    <i class='bx bxs-trash  me-0'></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <input class="form-control" formControlName="qty"
+                                                        id="projectObjectives" id="" 
+                                                        placeholder="">
+                                                </div>
+                                                </div>
+
+                                            
+
+                                            <hr>
+                                                <div class="row pb-1">
+                                                    <div class="col-lg-8 "></div>
+                                                    <div class="col-lg-4 ">
+                                                    
+                                            <div class="row pb-1">
+                                              
+                                                <div class="card-title d-flex align-items-center">
+                                                    <h6 class="mb-0 text-dark"> Total Cost In Figure  </h6>
+                                                      
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" formControlName="qty"
+                                                    id="projectObjectives" id="" 
+                                                    placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="row pb-1">
+                                                <div class="card-title d-flex align-items-center">
+                                                    <h6 class="mb-0 text-dark"> Total Cost In Words  </h6>
+                                                      
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" formControlName="qty"
+                                                    id="projectObjectives" id="" 
+                                                    placeholder="">
+                                                </div>
+                                            </div>
+                                                    </div>
+                                            </div>
+                                        
+
+                                            
+                                                <!--       
+                <p>  
+                  <label for="name">Product Name:</label>  
+                  <input type="text" id="name" name="name" formControlName="name" class="form-control">  
+                </p>  
+                <table class="table table-bordered" formArrayName="quantities">  
+                  <tr>  
+                    <th colspan="2">Add Deliverables:</th>  
+                    <th width="150px">
+                        <button type="button" (click)="addQuantity()" class="btn btn-info">Add More</button>
+                    </th>  
+                  </tr>  
+                  <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">  
+                    <td>  
+                        Quantity :  
+                        <input type="text" formControlName="qty" class="form-control">  
+                    </td>  
+                
+
+                    <td>  
+                        <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>  
+                    </td>  
+                  </tr>  
+                </table>  
+                 
+                <button type="submit" class="btn btn-success">Submit</button>  
+                   -->
+                                    
+                   
+                                                <div class="text-right pt-2">
+                                                    <button type="submit" (click)="selectTab2()" class="btn btn-success px-5">Next</button>
+                                                </div>
+                                            </form>
+                                            {{this.productForm.value | json}}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="dx-field" *ngIf="(tabContent == '5')">
+                                    <div class="card border-top border-0 border-4 border-success">
+                                        <div class="card-body p-5">
+                                            <div class="card-title d-flex align-items-center">
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+                                                <h5 class="mb-0 text-success">Project Sustainability Strategy
+                                                </h5>
+                                            </div>
+                                            <hr>
+                                       
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+            
+                                         
+                                          
+                                          
+                <form class="row">
+                    <div class="col-lg-12">
+                           <textarea class="form-control" formControlName="qty"
+                                                            id="projectObjectives" id="" rows="5"
+                                                            placeholder=""></textarea>
+                                                
+                        <div class="row">
+                            <div class="col-md-12 pt-2">
+                                <label for="projectClassification " class="form-label">
+                                    Related Jobs Done </label>
+                                <select id="projectClassification " class="form-select" (change)="selectChangeHandler($event)">
+                                    <option selected="">Please Select </option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No </option>
+                            
+                                </select>
+                            </div>
+                            <!-- <h1><span>You selected: </span><b>{{selectedDay}}</b></h1> -->
+                            <div class="col-md-12 pt-2" *ngIf="(selectedDay =='1')">
+                            
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <label for="projectObjectives" class="form-label">Current State</label>
+                                            <input type="text" class="form-control"
+                                            id="projectObjectives" placeholder="Budget Code">
+                                    </div>
+                                    <div class="col-lg-12 pt-2">
+                                        <label for="projectObjectives" class="form-label">Describe</label>
+                                        <textarea class="form-control" formControlName="qty"
+                                        id="projectObjectives" id="" rows="5"
+                                        placeholder=""></textarea>
+                                    </div>
+                                  
+
+                                   </div>
+                                      
+                           
+                            </div>
+                            <div class="col-md-12 pt-2" *ngIf="(selectedDay =='2')">
+                              
+                            </div>
+                          
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    
+                    </div>
+         
+
+
+                    <div class="text-right pt-2">
+                        <button type="submit" class="btn btn-success px-5" (click)="selectTab3()">Next</button>
+                    </div>
+                </form>
+                                            {{this.productForm.value | json}}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="dx-field" *ngIf="(tabContent == '6')">
+                                    <div class="card border-top border-0 border-4 border-success">
+                                        <div class="card-body p-5">
+                                            <div class="card-title d-flex align-items-center">
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+                                                <h5 class="mb-0 text-success">Policy Procedures Related To Project
+                                                </h5>
+                                            </div>
+                                            <hr>
+                                       
+                                                <!-- <div>
+                    <i class="bx bxs-user me-1 font-22 text-success"></i>
+                </div> -->
+            
+                                         
+                                          
+                                          
+                <form class="row">
+                    <div class="col-lg-12">
+                         
+                                                
+                        <div class="row">
+                            <div class="col-md-12 pt-2">
+                                <label for="projectClassification " class="form-label">
+                                   Please Select Policy  </label>
+                                <select id="projectClassification " class="form-select" (change)="selectChangeHandler($event)">
+                                    <option selected="">Please Select </option>
+                                    <option value="1">A</option>
+                                    <option value="2">B </option>
+                                    <option value="2">C </option>
+                                    <option value="2">D</option>
+                            
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+         
+
+
+                    <div class="text-right pt-2">
+                        <button type="submit" class="btn btn-success px-5" (click)="selectTab3()">Next</button>
+                    </div>
+                </form>
+                                            {{this.productForm.value | json}}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--end row-->

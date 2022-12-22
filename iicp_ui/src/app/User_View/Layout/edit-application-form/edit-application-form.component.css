@@ -27,6 +27,7 @@
   
   .card{
     background-color: #ffffff66;
+    margin-bottom : 0 !important ;
   }
   .form-control {
     background-color: #f3faf3;
@@ -53,12 +54,4 @@
 .my-button{
   padding: 0px 3px;
   border-width: 0px;
-}
-::ng-deep .dx-tab.dx-tab-selected {
-  background-color: #17a00e !important;
-  color: #fff !important;
-  font-weight: 600 !important;
-}
-::ng-deep .dx-tab-selected .dx-icon {
-  color: #fff !important;
 }

@@ -45,6 +45,7 @@ import { DxTabsModule, DxSelectBoxModule,  DxDataGridComponent,
   DxCheckBoxModule, } from 'devextreme-angular';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EditApplicationFormComponent } from './User_View/Layout/edit-application-form/edit-application-form.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     TestOurCertificateComponent,
     CreatePasswordComponent,
     ApplicationFormComponent,
+    EditApplicationFormComponent,
     
    
   ],
