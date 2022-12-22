@@ -21,6 +21,7 @@ import { TestOurCertificateComponent } from './User_View/Layout/test-our-certifi
 import { AuthGuard } from './Helpers/auth.guard';
 import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
 import { ApplicationFormComponent } from './User_View/Layout/application-form/application-form.component';
+import { EditApplicationFormComponent } from './User_View/Layout/edit-application-form/edit-application-form.component';
 
 
 
@@ -100,6 +101,9 @@ const routes: Routes = [
   {  path: 'application-form',
     component: ApplicationFormComponent
   },
+  {  path: 'edit-application-form',
+  component: EditApplicationFormComponent
+},
 
   
   // {
