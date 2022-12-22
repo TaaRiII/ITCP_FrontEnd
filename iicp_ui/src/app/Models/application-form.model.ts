@@ -6,4 +6,7 @@ export interface ProjectModel{
     ProjectObjectives?: string;
     ProjectDescription?: string;
     ProjectClassification?: string;
+    Deliverable?: string;
+    Milestone?: string;
+    ProjectId?: number;
 }
