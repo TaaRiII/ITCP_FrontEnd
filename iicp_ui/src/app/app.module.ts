@@ -14,11 +14,6 @@ import { SideBarComponent } from './User_View/Layout/side-bar/side-bar.component
 import { FormComponent } from './User_View/Layout/form/form.component';
 import { LoginFormComponent } from './User_View/Layout/login-form/login-form.component';
 import { SignupFormComponent } from './User_View/Layout/signup-form/signup-form.component';
-import { AdminLayoutComponent } from './Admin_View/Layout/admin-layout/admin-layout.component';
-import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-sidebar.component';
-import { AdminHeaderComponent } from './Admin_View/Layout/admin-header/admin-header.component';
-import { AdminFooterComponent } from './Admin_View/Layout/admin-footer/admin-footer.component';
-import { AdminPageContentComponent } from './Admin_View/Layout/admin-page-content/admin-page-content.component';
 import { UserDashboardComponent } from './User_View/Layout/user-dashboard/user-dashboard.component';
 import { RenewCertificateComponent } from './User_View/Layout/renew-certificate/renew-certificate.component';
 import { UserProfileComponent } from './User_View/Layout/user-profile/user-profile.component';
@@ -40,12 +35,23 @@ import { TestRenewalComponent } from './User_View/Layout/test-renewal/test-renew
 import { TestOurCertificateComponent } from './User_View/Layout/test-our-certificate/test-our-certificate.component';
 import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
 import { ApplicationFormComponent } from './User_View/Layout/application-form/application-form.component';
-import { DxTabsModule, DxSelectBoxModule,  DxDataGridComponent,
+import { DxTabsModule, 
+  DxSelectBoxModule,
+    DxDataGridComponent,
   DxDataGridModule,
-  DxCheckBoxModule, } from 'devextreme-angular';
+  DxCheckBoxModule,
+  DxPieChartModule, 
+  DxChartModule} from 'devextreme-angular';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { EditApplicationFormComponent } from './User_View/Layout/edit-application-form/edit-application-form.component';
+import { LevelOneComponent } from './User_View/Layout/level-one/level-one.component';
+import { LevelTwoComponent } from './User_View/Layout/level-two/level-two.component';
+import { LevelThreeComponent } from './User_View/Layout/level-three/level-three.component';
+import { AdminDashboardComponent } from './Admin_View/Layout/admin-dashboard/admin-dashboard.component';
+import { AdminLayoutComponent } from './Admin_View/Layout/admin-layout/admin-layout.component';
+import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-sidebar.component';
+
 
 @NgModule({
   declarations: [
@@ -58,11 +64,6 @@ import { EditApplicationFormComponent } from './User_View/Layout/edit-applicatio
     FormComponent,
     LoginFormComponent,
     SignupFormComponent,
-    AdminLayoutComponent,
-    AdminSidebarComponent,
-    AdminHeaderComponent,
-    AdminFooterComponent,
-    AdminPageContentComponent,
     UserDashboardComponent,
     RenewCertificateComponent,
     UserProfileComponent,
@@ -76,7 +77,13 @@ import { EditApplicationFormComponent } from './User_View/Layout/edit-applicatio
     CreatePasswordComponent,
     ApplicationFormComponent,
     EditApplicationFormComponent,
-    
+    LevelOneComponent,
+    LevelTwoComponent,
+    LevelThreeComponent,
+    AdminDashboardComponent,
+    AdminLayoutComponent,
+    AdminSidebarComponent,
+   
    
   ],
   imports: [
@@ -92,6 +99,8 @@ import { EditApplicationFormComponent } from './User_View/Layout/edit-applicatio
   DxDataGridModule,
   DxCheckBoxModule,
   Ng2SearchPipeModule,
+  DxPieChartModule,
+  DxChartModule,
   ],
   // providers: [],
 

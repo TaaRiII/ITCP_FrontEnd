@@ -4,7 +4,6 @@ import { EmployeesListComponent } from './Components/Employees/employees-list/em
 import { AppLayoutComponent } from './User_View/Layout/app-layout/app-layout.component';
 import { LoginFormComponent } from './User_View/Layout/login-form/login-form.component';
 import { SignupFormComponent } from './User_View/Layout/signup-form/signup-form.component';
-import { AdminLayoutComponent } from './Admin_View/Layout/admin-layout/admin-layout.component';
 import { UserDashboardComponent } from './User_View/Layout/user-dashboard/user-dashboard.component';
 import { FormComponent } from './User_View/Layout/form/form.component';
 import { RenewCertificateComponent } from './User_View/Layout/renew-certificate/renew-certificate.component';
@@ -22,7 +21,10 @@ import { AuthGuard } from './Helpers/auth.guard';
 import { CreatePasswordComponent } from './User_View/Layout/create-password/create-password.component';
 import { ApplicationFormComponent } from './User_View/Layout/application-form/application-form.component';
 import { EditApplicationFormComponent } from './User_View/Layout/edit-application-form/edit-application-form.component';
-
+import { LevelOneComponent } from './User_View/Layout/level-one/level-one.component';
+import { LevelTwoComponent } from './User_View/Layout/level-two/level-two.component';
+import { LevelThreeComponent } from './User_View/Layout/level-three/level-three.component';
+import { AdminDashboardComponent } from './Admin_View/Layout/admin-dashboard/admin-dashboard.component';
 
 
 const routes: Routes = [
@@ -53,16 +55,13 @@ const routes: Routes = [
     component: ForgetPasswordComponent
   },
   
-  {
-    path: 'admin',canActivate:[AuthGuard],
-    component: AdminLayoutComponent
-  },
+  
   {
     path: 'user-form',canActivate:[AuthGuard],
     component: FormComponent
   },
   {
-    path: 'renew-certificate',canActivate:[AuthGuard],
+    path: 'submit-applications',canActivate:[AuthGuard],
     component: RenewCertificateComponent
   },
   {
@@ -104,7 +103,18 @@ const routes: Routes = [
   {  path: 'edit-application-form',
   component: EditApplicationFormComponent
 },
-
+{  path: 'level-one',
+component: LevelOneComponent
+},
+{  path: 'level-two',
+component: LevelTwoComponent
+},
+{  path: 'level-three',
+component: LevelThreeComponent
+},
+{  path: 'admin-dashboard',
+component: AdminDashboardComponent
+},
   
   // {
   //   path: '',
