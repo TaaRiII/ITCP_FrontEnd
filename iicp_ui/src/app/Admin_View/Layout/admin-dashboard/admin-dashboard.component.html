@@ -1,0 +1,236 @@
+<div class="wrapper">
+    <app-admin-sidebar></app-admin-sidebar>
+    <div class="page-wrapper">
+        <div class="page-content">
+            <!--breadcrumb-->
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3"> Dashboard</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                        </ol>
+                    </nav>
+                </div>
+
+            </div>
+            <!--end breadcrumb-->
+            <div class="card">
+                <div class="card-body">
+            <div class="row ">
+                <div class="col-lg-6">
+                    <div class="card">
+                    <div id="chart-demo">
+                        <dx-pie-chart   id="pie" #pie title="Olympic Medals in 2008" palette="bright" [dataSource]="olympicMedals"
+                            [resolveLabelOverlapping]="resolveOverlappingTypes[0]">
+                            <dxo-margin [bottom]="20"></dxo-margin>
+                            <dxo-legend [visible]="false"></dxo-legend>
+                            <dxo-export [enabled]="true"></dxo-export>
+                            <dxi-series argumentField="country" valueField="medals">
+                                <dxo-label [visible]="true" [customizeText]="customizeLabel"> </dxo-label>
+                            </dxi-series>
+                        </dx-pie-chart>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                    <dx-pie-chart
+                    id="pie"
+                    type="doughnut"
+                    title="The Population of Continents and Regions"
+                    palette="Soft Pastel"
+                    [dataSource]="populationByRegions"
+                  >
+                    <dxi-series argumentField="region">
+                      <dxo-label [visible]="true" format="millions">
+                        <dxo-connector [visible]="true"></dxo-connector>
+                      </dxo-label>
+                    </dxi-series>
+                    <dxo-export [enabled]="true"></dxo-export>
+                    <dxo-legend
+                      [margin]="0"
+                      horizontalAlignment="right"
+                      verticalAlignment="top"
+                    ></dxo-legend>
+                    <dxo-tooltip
+                      [enabled]="true"
+                      [customizeTooltip]="customizeTooltip"
+                      format="millions"
+                    >
+                    </dxo-tooltip>
+                  </dx-pie-chart>
+                  </div>    
+                </div>
+
+                <div class="col-lg-12 p-2">
+                    <div class="card">
+                    <dx-pie-chart id="pie" title="Area of Countries" palette="bright" [dataSource]="areas"
+                        (onPointClick)="pointClickHandler($event)" (onLegendClick)="legendClickHandler($event)">
+                        <dxi-series argumentField="country" valueField="area">
+                            <dxo-label [visible]="true">
+                                <dxo-connector [visible]="true" [width]="1"></dxo-connector>
+                            </dxo-label>
+                        </dxi-series>
+                        <dxo-size [width]="500"></dxo-size>
+                        <dxo-export [enabled]="true"></dxo-export>
+                    </dx-pie-chart>
+                </div>
+                </div>
+
+
+            
+                
+            </div>
+            <!--end row-->
+<div class="row ">
+<div class="col-lg-6 p-2" >
+    <div class="card">
+        <div class="inner-card"> 
+    <dx-chart id="chart" [dataSource]="userData" palette="soft">
+        <dxo-title text="Age Breakdown of Facebook Users in the U.S." subtitle="as of January 2017">
+        </dxo-title>
+        <dxo-common-series-settings argumentField="age" type="bar" valueField="number"
+            [ignoreEmptyPoints]="true">
+        </dxo-common-series-settings>
+        <dxo-series-template nameField="age"></dxo-series-template>
+    </dx-chart>
+    </div>
+    </div>
+</div>
+<div class="col-lg-6 p-2" >
+    <div class="card">
+        <div class="inner-card"> 
+    <dx-chart id="chart" [dataSource]="dataSource">
+        <dxi-series
+          argumentField="day"
+          valueField="oranges"
+          name="My oranges"
+          type="bar"
+          color="#ffaa66"
+        >
+        </dxi-series>
+      </dx-chart>
+    </div>
+    </div>
+</div>
+<div class="col-lg-12 p-2" >
+    <div class="card">
+        <div class="inner-card"> 
+    <dx-chart
+    id="chart"
+    palette="vintage"
+    [dataSource]="populationData"
+    title="Evolution of Population by Continent"
+  >
+    <dxi-series valueField="africa" name="Africa"></dxi-series>
+    <dxi-series valueField="asia" name="Asia"></dxi-series>
+    <dxi-series valueField="europe" name="Europe"></dxi-series>
+    <dxi-series
+      valueField="latinamerica"
+      name="Latin America & Caribbean"
+    ></dxi-series>
+    <dxi-series valueField="northamerica" name="Northern America"></dxi-series>
+    <dxi-series valueField="oceania" name="Oceania"></dxi-series>
+    <dxi-series
+      axis="total"
+      type="spline"
+      valueField="total"
+      name="Total"
+      color="#008fd8"
+    >
+    </dxi-series>
+    <dxo-common-series-settings argumentField="year" type="fullstackedbar">
+    </dxo-common-series-settings>
+    <dxi-value-axis>
+      <dxo-grid [visible]="true"></dxo-grid>
+    </dxi-value-axis>
+    <dxi-value-axis name="total" position="right">
+      <dxo-grid [visible]="true"></dxo-grid>
+      <dxo-title text="Total Population, billions"></dxo-title>
+    </dxi-value-axis>
+    <dxo-legend verticalAlignment="bottom" horizontalAlignment="center">
+    </dxo-legend>
+    <dxo-export [enabled]="true"></dxo-export>
+    <dxo-tooltip
+      [enabled]="true"
+      [shared]="true"
+      [customizeTooltip]="customizeTooltip"
+    >
+      <dxo-format type="largeNumber" [precision]="1"></dxo-format>
+    </dxo-tooltip>
+  </dx-chart>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-6 p-2" >
+    <div class="card">
+        <div class="inner-card"> 
+  <dx-chart id="chart" [dataSource]="OildataSource">
+  <dxo-title text="Production of Crude Oil">
+    <dxo-subtitle text="(in Barrels)"></dxo-subtitle>
+  </dxo-title>
+  <dxo-common-series-settings
+    argumentField="state"
+    valueField="value"
+    type="bar"
+  >
+    <dxo-aggregation [enabled]="true" method="sum"></dxo-aggregation>
+  </dxo-common-series-settings>
+  <dxo-argument-axis [aggregateByCategory]="true"></dxo-argument-axis>
+  <dxo-series-template nameField="year"></dxo-series-template>
+</dx-chart>
+    </div>
+    </div>
+</div>
+
+
+<div class="col-lg-6 p-2" >
+    <div class="card">
+        <div class="inner-card"> 
+    <div id="chart-demo">
+        <dx-chart  id="chart" palette="Violet" [dataSource]="countriesInfo">
+          <dxi-series
+            *ngFor="let energy of energySources"
+            [valueField]="energy.value"
+            [name]="energy.name"
+          >
+          </dxi-series>
+          <dxo-common-series-settings
+            #seriesSettings
+            argumentField="country"
+            [type]="types[0]"
+          >
+          </dxo-common-series-settings>
+          <dxo-margin [bottom]="20"></dxo-margin>
+          <dxo-argument-axis
+            [valueMarginsEnabled]="false"
+            discreteAxisDivisionMode="crossLabels"
+          >
+            <dxo-grid [visible]="true"></dxo-grid>
+          </dxo-argument-axis>
+          <dxo-legend
+            verticalAlignment="bottom"
+            horizontalAlignment="center"
+            itemTextPosition="bottom"
+          >
+          </dxo-legend>
+          <dxo-title text="Energy Consumption in 2004">
+            <dxo-subtitle text="(Millions of Tons, Oil Equivalent)"> </dxo-subtitle>
+          </dxo-title>
+          <dxo-export [enabled]="true"></dxo-export>
+          <dxo-tooltip [enabled]="true"></dxo-tooltip>
+        </dx-chart>
+      </div>
+        </div>
+    </div>
+  </div>
+</div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

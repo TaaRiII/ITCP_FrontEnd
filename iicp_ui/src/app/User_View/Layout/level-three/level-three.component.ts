@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-renew-certificate',
-  templateUrl: './renew-certificate.component.html',
-  styleUrls: ['./renew-certificate.component.css']
+  selector: 'app-level-three',
+  templateUrl: './level-three.component.html',
+  styleUrls: ['./level-three.component.css']
 })
-export class RenewCertificateComponent implements OnInit {
+export class LevelThreeComponent implements OnInit {
+
    
   title = 'Angular Search Using ng2-search-filter';
   searchText:any;
@@ -21,7 +22,6 @@ export class RenewCertificateComponent implements OnInit {
     { ID: 898, MDA: '35703', ProjectName: 'Clean Water Supply', Classification:'Hardware/5000 Gallon',Cost:'5000$',Durations:'15 Days',EntryUser:'Kings lao', Status:'Processing', },
     { ID: 1898, MDA: '35703', ProjectName: 'Clean Water Supply', Classification:'Hardware/5000 Gallon',Cost:'5000$',Durations:'15 Days',EntryUser:'Kings lao', Status:'Processing', },
   ];
-
   constructor() { }
 
   ngOnInit(): void {
