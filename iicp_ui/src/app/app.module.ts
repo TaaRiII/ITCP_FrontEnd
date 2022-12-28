@@ -51,6 +51,7 @@ import { LevelThreeComponent } from './User_View/Layout/level-three/level-three.
 import { AdminDashboardComponent } from './Admin_View/Layout/admin-dashboard/admin-dashboard.component';
 import { AdminLayoutComponent } from './Admin_View/Layout/admin-layout/admin-layout.component';
 import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-sidebar.component';
+import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-user/super-register-user.component';
 
 
 @NgModule({
@@ -83,6 +84,8 @@ import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-s
     AdminDashboardComponent,
     AdminLayoutComponent,
     AdminSidebarComponent,
+    SuperRegisterUserComponent,
+
    
    
   ],

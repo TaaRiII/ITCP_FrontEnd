@@ -25,6 +25,7 @@ import { LevelOneComponent } from './User_View/Layout/level-one/level-one.compon
 import { LevelTwoComponent } from './User_View/Layout/level-two/level-two.component';
 import { LevelThreeComponent } from './User_View/Layout/level-three/level-three.component';
 import { AdminDashboardComponent } from './Admin_View/Layout/admin-dashboard/admin-dashboard.component';
+import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-user/super-register-user.component';
 
 
 const routes: Routes = [
@@ -114,6 +115,9 @@ component: LevelThreeComponent
 },
 {  path: 'admin-dashboard',
 component: AdminDashboardComponent
+},
+{  path: 'register-superadmin-user',
+component: SuperRegisterUserComponent
 },
   
   // {
