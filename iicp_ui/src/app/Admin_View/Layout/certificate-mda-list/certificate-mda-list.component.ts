@@ -1,19 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {
-  DxDataGridComponent,
-  DxDataGridModule,
-  DxSelectBoxModule,
-  DxCheckBoxModule,
-} from 'devextreme-angular';
-import { UserDashboardTableServiceService, Service } from '../../../Services/User/user-dashboard-table.service.service';
 
 @Component({
-  selector: 'app-active-mda-list',
-  templateUrl: './active-mda-list.component.html',
-  styleUrls: ['./active-mda-list.component.css']
+  selector: 'app-certificate-mda-list',
+  templateUrl: './certificate-mda-list.component.html',
+  styleUrls: ['./certificate-mda-list.component.css']
 })
-export class ActiveMdaListComponent {
+export class CertificateMdaListComponent {
 
   title = 'Angular Search Using ng2-search-filter';
   searchText:any;

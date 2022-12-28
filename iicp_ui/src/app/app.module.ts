@@ -54,6 +54,8 @@ import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-s
 import { AdminLoginComponent } from './Admin_View/Layout/admin-login/admin-login.component';
 import { ActiveMdaListComponent } from './Admin_View/Layout/active-mda-list/active-mda-list.component';
 import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-user/super-register-user.component';
+import { CertificateMdaListComponent } from './Admin_View/Layout/certificate-mda-list/certificate-mda-list.component';
+import { SingleMdaListComponent } from './Admin_View/Layout/single-mda-list/single-mda-list.component';
 
 
 @NgModule({
@@ -89,6 +91,8 @@ import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-u
     AdminLoginComponent,
     ActiveMdaListComponent,
     SuperRegisterUserComponent,
+    CertificateMdaListComponent,
+    SingleMdaListComponent,
 
    
    

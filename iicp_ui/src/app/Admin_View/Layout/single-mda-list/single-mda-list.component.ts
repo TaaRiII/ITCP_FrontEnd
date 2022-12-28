@@ -7,13 +7,12 @@ import {
   DxCheckBoxModule,
 } from 'devextreme-angular';
 import { UserDashboardTableServiceService, Service } from '../../../Services/User/user-dashboard-table.service.service';
-
 @Component({
-  selector: 'app-active-mda-list',
-  templateUrl: './active-mda-list.component.html',
-  styleUrls: ['./active-mda-list.component.css']
+  selector: 'app-single-mda-list',
+  templateUrl: './single-mda-list.component.html',
+  styleUrls: ['./single-mda-list.component.css']
 })
-export class ActiveMdaListComponent {
+export class SingleMdaListComponent{
 
   title = 'Angular Search Using ng2-search-filter';
   searchText:any;
@@ -27,4 +26,5 @@ export class ActiveMdaListComponent {
   constructor() {
     
   }
+
 }
