@@ -1,0 +1,94 @@
+<div class="wrapper">
+    <app-admin-sidebar></app-admin-sidebar>
+    <div class="page-wrapper">
+        <div class="page-content">
+            <!--breadcrumb-->
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3"> Register User</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Form</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!--breadcrumb end-->
+
+            <div class="card">
+                <div class="card-body">
+                    <div   class="card border-top border-0 border-4 border-success">
+                        <div   class="card-body p-5">
+                            <div   class="card-title d-flex align-items-center">
+                                <h5   class="mb-0 text-success">Registeration Form </h5>
+                            </div>
+                            <hr  >
+                            <form   novalidate="" class="row ng-pristine ng-valid ng-touched">
+                                    <div   class="row">
+                                        <div   class="col-md-6 pt-2"><label  
+                                                for="projectName" class="form-label">Full Name</label><input
+                                                  type="text" id="fullName"
+                                                placeholder="Enter Full Name" name="fullName"
+                                                class="form-control ng-untouched ng-pristine ng-valid"
+                                                ng-reflect-name="fullName" ng-reflect-model=""></div>
+                                        <div class="col-md-6 pt-2">
+                                            <label for="projectObjectives" class="form-label">Username</label>
+                                            <input  type="text"
+                                                id="Username" placeholder="Enter Username"
+                                                name="Username"
+                                                class="form-control ng-untouched ng-pristine ng-valid"
+                                                ng-reflect-name="Username" ng-reflect-model="">
+                                            </div>
+                                            <div class="col-md-6 pt-2">
+                                                <label for="inputEmailAddress" class="form-label">Email Address</label>
+                                                <input  type="email"
+                                                    id="inputEmailAddress" placeholder="Enter Email Address"
+                                                    name="email"
+                                                    class="form-control ng-untouched ng-pristine ng-valid"
+                                                    ng-reflect-name="Username" ng-reflect-model="">
+                                                </div>
+                                                <div class="col-md-6 pt-2">
+                                                    <label for="inputChoosePassword" class="form-label">Enter Password</label>
+                                                    <input  type="email"
+                                                        id="inputChoosePassword" placeholder="Enter Password"
+                                                        name="password"
+                                                        class="form-control ng-untouched ng-pristine ng-valid"
+                                                        ng-reflect-name="password" ng-reflect-model="">
+                                                    </div>
+                                                    <div class="col-md-6 pt-2">
+                                                        <label for="inputChoosePassword" class="form-label">Enter Phone</label>
+                                                        <input  type="email"
+                                                            id="inputChoosePassword" placeholder="Phone Number"
+                                                            name="phone_number"
+                                                            class="form-control ng-untouched ng-pristine ng-valid"
+                                                            ng-reflect-name="phone_number" ng-reflect-model="">
+                                                        </div>
+                                        <div   class="col-md-6 pt-3"><label  
+                                                for="projectClassification " class="form-label">User Type
+                                            </label><select   id="projectClassification "
+                                                name="ProjectClassification"
+                                                class="form-select ng-untouched ng-pristine ng-valid"
+                                                ng-reflect-name="ProjectClassification" ng-reflect-model="">
+                                                <option   selected="">Please Select Type
+                                                </option>
+                                                <option  >Secretariat</option>
+                                                <option  >Committee</option>
+                                                <option  >Management</option>
+                                              
+                                            </select></div>
+                                    </div>
+                              
+                            
+                                <div   class="text-right pt-2"><button 
+                                        type="submit" class="btn btn-success px-5">Register</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -53,6 +53,7 @@ import { AdminLayoutComponent } from './Admin_View/Layout/admin-layout/admin-lay
 import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-sidebar.component';
 import { AdminLoginComponent } from './Admin_View/Layout/admin-login/admin-login.component';
 import { ActiveMdaListComponent } from './Admin_View/Layout/active-mda-list/active-mda-list.component';
+import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-user/super-register-user.component';
 
 
 @NgModule({
@@ -87,6 +88,8 @@ import { ActiveMdaListComponent } from './Admin_View/Layout/active-mda-list/acti
     AdminSidebarComponent,
     AdminLoginComponent,
     ActiveMdaListComponent,
+    SuperRegisterUserComponent,
+
    
    
   ],
