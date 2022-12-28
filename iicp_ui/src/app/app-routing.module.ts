@@ -25,7 +25,8 @@ import { LevelOneComponent } from './User_View/Layout/level-one/level-one.compon
 import { LevelTwoComponent } from './User_View/Layout/level-two/level-two.component';
 import { LevelThreeComponent } from './User_View/Layout/level-three/level-three.component';
 import { AdminDashboardComponent } from './Admin_View/Layout/admin-dashboard/admin-dashboard.component';
-
+import { AdminLoginComponent } from './Admin_View/Layout/admin-login/admin-login.component';
+import { ActiveMdaListComponent } from './Admin_View/Layout/active-mda-list/active-mda-list.component';
 
 const routes: Routes = [
   // {
@@ -115,7 +116,12 @@ component: LevelThreeComponent
 {  path: 'admin-dashboard',
 component: AdminDashboardComponent
 },
-  
+{  path: 'admin-login',
+component: AdminLoginComponent
+},
+{  path: 'active-mda',
+component: ActiveMdaListComponent
+},
   // {
   //   path: '',
   //   component: UserDashboardComponent

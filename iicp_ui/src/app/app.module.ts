@@ -51,6 +51,8 @@ import { LevelThreeComponent } from './User_View/Layout/level-three/level-three.
 import { AdminDashboardComponent } from './Admin_View/Layout/admin-dashboard/admin-dashboard.component';
 import { AdminLayoutComponent } from './Admin_View/Layout/admin-layout/admin-layout.component';
 import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-sidebar.component';
+import { AdminLoginComponent } from './Admin_View/Layout/admin-login/admin-login.component';
+import { ActiveMdaListComponent } from './Admin_View/Layout/active-mda-list/active-mda-list.component';
 
 
 @NgModule({
@@ -83,6 +85,8 @@ import { AdminSidebarComponent } from './Admin_View/Layout/admin-sidebar/admin-s
     AdminDashboardComponent,
     AdminLayoutComponent,
     AdminSidebarComponent,
+    AdminLoginComponent,
+    ActiveMdaListComponent,
    
    
   ],
