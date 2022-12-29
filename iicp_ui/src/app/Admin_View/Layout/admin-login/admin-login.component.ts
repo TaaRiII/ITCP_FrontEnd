@@ -54,7 +54,7 @@ export class AdminLoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authenticationService.login(this.User.username, this.User.password)    
+    this.authenticationService.admin_login(this.User.username, this.User.password)    
     .subscribe({
       next: (_token) => {
                 console.log("hest");
@@ -66,7 +66,7 @@ export class AdminLoginComponent implements OnInit {
                 this.isLoggedIn = true;
                 this.roles = this.tokenStorage.getUser().roles;
                 // this.reloadPage();
-                this.router.navigate(['/dashboard']);
+                this.router.navigate(['/admin-dashboard']);
                 // window.location.reload();
       }
     });
