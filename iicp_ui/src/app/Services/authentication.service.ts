@@ -4,18 +4,18 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
-import { user } from '../Models/user.model';
+import { Token } from '../Models/token.model';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    private currentUserSubject: BehaviorSubject<user>;
-    public currentUser: Observable<user>;
+    private currentUserSubject: BehaviorSubject<Token>;
+    public currentUser: Observable<Token>;
 
     constructor(private http: HttpClient) {
-         this.currentUserSubject = new BehaviorSubject<user>(localStorage.getItem('currentUser') ?JSON.parse(localStorage.getItem('currentUser') || '{}'):null);
+         this.currentUserSubject = new BehaviorSubject<Token>(localStorage.getItem('currentUser') ?JSON.parse(localStorage.getItem('currentUser') || '{}'):null);
          this.currentUser = this.currentUserSubject.asObservable();
     }
 
