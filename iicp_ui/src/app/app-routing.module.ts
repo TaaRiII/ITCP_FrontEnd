@@ -84,48 +84,55 @@ const routes: Routes = [
     component: SearchRegisterAcountsComponent
   },
   {
-    path: 'dashboard',canActivate:[AuthGuard],
-    data: {roles: 2},
+     path: 'dashboard',//canActivate:[AuthGuard],
+    // data: {roles: "SuperMDA"},
     component: UserDashboardComponent
   },
   {
     path: 'company-profile',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles: "EntryUser"},
     component: MyCompanyProfileComponent
   },
   {
     path: 'my-certificate',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles: "SuperMDA"},
     component: MyCertificateComponent
   },
   {
     path: 'renewal-certificate',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles: "SuperMDA"},
     component: TestRenewalComponent
   },
   
   {
     path: 'our-certificate',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles: "SuperMDA"},
     component: TestOurCertificateComponent},
   
-  {  path: 'create-password',
+  {  path: 'create-password',canActivate:[AuthGuard],
+  data: {roles: "SuperMDA"},
     component: CreatePasswordComponent
   },
 
-  {  path: 'application-form',
+  {  path: 'application-form',canActivate:[AuthGuard],
+  data: {roles: "EntryUser"},
     component: ApplicationFormComponent
   },
-  {  path: 'edit-application-form',
+  {  path: 'edit-application-form',canActivate:[AuthGuard],
+  data: {roles: "SuperMDA"},
   component: EditApplicationFormComponent
 },
-{  path: 'level-one',
+{  path: 'level-one',canActivate:[AuthGuard],
+data: {roles: "SuperMDA"},
 component: LevelOneComponent
 },
-{  path: 'level-two',
+{  path: 'level-two',canActivate:[AuthGuard],
+data: {roles: "SuperMDA"},
 component: LevelTwoComponent
 },
 {  path: 'level-three',
+canActivate:[AuthGuard],
+    data: {roles: "SuperMDA"},
 component: LevelThreeComponent
 },
 {  path: 'admin-dashboard',
