@@ -30,6 +30,8 @@ import { ActiveMdaListComponent } from './Admin_View/Layout/active-mda-list/acti
 import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-user/super-register-user.component';
 import { CertificateMdaListComponent } from './Admin_View/Layout/certificate-mda-list/certificate-mda-list.component';
 import { SingleMdaListComponent } from './Admin_View/Layout/single-mda-list/single-mda-list.component';
+import { AddCredentialUserComponent } from './Admin_View/Layout/add-credential-user/add-credential-user.component';
+
 
 const routes: Routes = [
   // {
@@ -163,6 +165,10 @@ component: SuperRegisterUserComponent
   canActivate:[AuthGuard],
   data: {roles: 1},
   component:SingleMdaListComponent
+},
+{
+  path:"create-credential-user",
+  component:AddCredentialUserComponent
 },
   // {
   //   path: '',
