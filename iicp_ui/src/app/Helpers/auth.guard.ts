@@ -15,16 +15,26 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this._authService.currentUser.pipe(
       take(1),
-      map(user =>{
+      map(u =>{
         //console.log("Hi");
         //console.log(user);
         // return res ? true : false;
-        if(user){
+        console.log("test");
+        let roles = route.data['roles'];
+        console.log(roles);
+        console.log(u);
+        console.log(u.role);
+        console.log(u.name);
+        if(u.role === roles){
           //console.log("if are working")
           return true;
         }
+if(roles === 2){
+  return this.route.createUrlTree(['/login']);
+}
+return this.route.createUrlTree(['/admin-login']);
         //console.log("if not working")
-        return this.route.createUrlTree(['/login']);
+        
       })
     )
   }

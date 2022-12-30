@@ -35,7 +35,18 @@ export class AuthenticationService {
                 return user;
             }));
     }
-
+    admin_login(username: string | null, password : string | null): Observable<any> {
+        // console.log("testing");
+        //console.log(user);
+        return this.http.post<any>(`${environment.baseApiUrl}/Users/LoginUser`, { username : username,password:password } , httpOptions)
+            .pipe(map(user => {
+            //     //store user details and jwt token in local storage to keep user logged in between page refreshes
+                 localStorage.setItem('currentUser', JSON.stringify(user));
+                console.log('currentUser');
+                this.currentUserSubject.next(user);
+                return user;
+            }));
+    }
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');

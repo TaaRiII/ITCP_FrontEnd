@@ -41,6 +41,7 @@ const routes: Routes = [
   // },
   {
     path: 'employees',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: EmployeesListComponent
   },
   {
@@ -64,39 +65,48 @@ const routes: Routes = [
   
   {
     path: 'user-form',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: FormComponent
   },
   {
     path: 'submit-applications',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: RenewCertificateComponent
   },
   {
     path: 'user-profile',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: UserProfileComponent
   },
   {
     path: 'search-register-accounts',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: SearchRegisterAcountsComponent
   },
   {
     path: 'dashboard',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: UserDashboardComponent
   },
   {
     path: 'company-profile',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: MyCompanyProfileComponent
   },
   {
     path: 'my-certificate',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: MyCertificateComponent
   },
   {
     path: 'renewal-certificate',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: TestRenewalComponent
   },
   
   {
     path: 'our-certificate',canActivate:[AuthGuard],
+    data: {roles: 2},
     component: TestOurCertificateComponent},
   
   {  path: 'create-password',
@@ -119,24 +129,34 @@ component: LevelTwoComponent
 component: LevelThreeComponent
 },
 {  path: 'admin-dashboard',
+canActivate:[AuthGuard],
+data: {roles: 1},
 component: AdminDashboardComponent
 },
 {  path: 'admin-login',
 component: AdminLoginComponent
 },
 {  path: 'register-superadmin-user',
+canActivate:[AuthGuard],
+data: {roles: 1},
 component: SuperRegisterUserComponent
 },
 {
   path:"active-mda",
+  canActivate:[AuthGuard],
+  data: {roles: 1},
   component: ActiveMdaListComponent
 },
 {
   path:"mda-certificate",
+  canActivate:[AuthGuard],
+  data: {roles: 1},
   component:CertificateMdaListComponent
 },
 {
   path:"single-mda",
+  canActivate:[AuthGuard],
+  data: {roles: 1},
   component:SingleMdaListComponent
 },
 {
