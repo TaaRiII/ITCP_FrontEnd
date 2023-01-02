@@ -17,11 +17,12 @@ export class AuthenticationService {
     constructor(private http: HttpClient) {
          this.currentUserSubject = new BehaviorSubject<Token>(localStorage.getItem('currentUser') ?JSON.parse(localStorage.getItem('currentUser') || '{}'):null);
          this.currentUser = this.currentUserSubject.asObservable();
+         console.log("auth" + this.currentUser);
     }
 
-    // public get currentUserValue(): user {
-    //     return this.currentUserSubject.value;
-    // } 
+    public get currentUserValue(): any {
+        return this.currentUserSubject.value.user.role;
+    } 
 
     login(username: string | null, password : string | null): Observable<any> {
         // console.log("testing");
@@ -46,6 +47,12 @@ export class AuthenticationService {
                 this.currentUserSubject.next(user);
                 return user;
             }));
+    }
+    current(){
+        debugger;
+        console.log("jjj");
+        return this.currentUser;
+        
     }
     logout() {
         // remove user from local storage to log user out
