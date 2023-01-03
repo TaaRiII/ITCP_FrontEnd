@@ -28,7 +28,7 @@ export class LoginFormComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
-
+  dbroles: any;
   constructor(
     private authenticationService: AuthenticationService,
     private tokenStorage: TokenStorageService,
@@ -49,18 +49,18 @@ export class LoginFormComponent implements OnInit {
   //   });
 
   ngOnInit() {
+    console.log("ng");
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().roles;
     }
+
   }
 
   onSubmit() {
     this.authenticationService.login(this.User.username, this.User.password)    
     .subscribe({
       next: (_token) => {
-                console.log("hest");
-                console.log(_token);
                 this.tokenStorage.saveToken(_token.accesstoken);
                 this.tokenStorage.saveUser(_token.user);
 
@@ -68,7 +68,15 @@ export class LoginFormComponent implements OnInit {
                 this.isLoggedIn = true;
                 this.roles = this.tokenStorage.getUser().roles;
                 // this.reloadPage();
-                this.router.navigate(['/dashboard']);
+                console.log("testfirst");
+                //this.dbroles = this.authenticationService.currentUserValue();
+                console.log(_token.user.role);
+                if(_token.user.role ==="SuperMDA"){
+                  this.router.navigate(['/dashboard']);
+                }
+                else{
+                  this.router.navigate(['/application-form']);
+                }
                 // window.location.reload();
       }
     });

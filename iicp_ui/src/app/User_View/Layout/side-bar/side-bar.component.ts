@@ -11,7 +11,7 @@ styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
 
-UserRole: any;
+UserRole: any ='';
 constructor(
 private _authService:AuthenticationService,public router: Router
 ){

@@ -24,6 +24,11 @@ export class UserDashboardComponent {
     { ID: 777, MDA: '35703', ProjectName: 'Clean Water Supply', Classification:'Hardware/5000 Gallon',Cost:'5000$',Durations:'15 Days',EntryUser:'Kings lao', Status:'Submited', },
     { ID: 898, MDA: '35703', ProjectName: 'Clean Water Supply', Classification:'Hardware/5000 Gallon',Cost:'5000$',Durations:'15 Days',EntryUser:'Kings lao', Status:'Submited', },
   ];
+  // dangerAlert(name:string){
+  //   if(confirm("Are you sure to delete "+name)) {
+  //     console.log("Implement delete functionality here");
+  //   }
+  // }
   constructor() {
     
   }

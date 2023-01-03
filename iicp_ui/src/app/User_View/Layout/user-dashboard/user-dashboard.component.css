@@ -9,6 +9,7 @@
 }
 .card{
     background-color: #fff0;
+    margin-bottom: 2.5rem;
 }
 .table-light {
     --bs-table-bg: #fff0;
@@ -103,3 +104,13 @@ background-color: #007a5f05;
     .modal-body{
         padding: 0 !important;
       }
+
+@media (min-width: 576px){
+.myclss{
+    max-width: 750px;
+    margin: 8.75rem auto !important;
+}
+}
+.inner-card{
+    padding: 0 2rem;
+}

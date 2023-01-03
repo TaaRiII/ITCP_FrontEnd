@@ -22,14 +22,14 @@
                         </div>
                         <!--navigation-->
                         <ul class="metismenu mm-show" id="menu">
-                            <li >
+                            <li *ngIf="UserRole === 'SuperMDA'" >
                                 <a routerLink="/dashboard"  aria-expanded="true">
                                     <div class="parent-icon"><i class="bx bx-home-circle"></i>
                                     </div>
                                     <div class="menu-title">Dashboard</div>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a routerLink="/user-form"  >
                                       <!-- <a routerLink="/user-form"   aria-expanded="true"> -->
                                 <!-- <a [routerLink] = "['/user-form']"  (click)="test()"> -->
@@ -70,42 +70,49 @@
                                     <div class="menu-title">My Application</div>
                                 </a>
                             </li> -->
-                            <li *ngIf="UserRole === 'MDA'">
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a routerLink="/search-register-accounts">
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Project In Progress </div>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a routerLink="/submit-applications" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Submited Projects</div>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a routerLink="/my-certificate" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">New Projects</div>
                                 </a>
-                            </li>
-                            <li>
-                                <a routerLink="/company-profile" >
+                            </li >
+                            <li *ngIf="UserRole === 'SuperMDA' ">
+                                <a routerLink="/rejected-projects" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Rejected Project</div>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngIf="UserRole === 'EnteryUser' ">
+                                <a routerLink="/rejected-project" >
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">Rejected Project</div>
+                                </a>
+                            </li>
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a routerLink="/renewal-certificate" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Renewal Of Certificate</div>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a routerLink="/our-certificate" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
@@ -119,14 +126,14 @@
                                     <div class="menu-title">Search Registered Accounts </div>
                                 </a>
                             </li> -->
-                            <li>
+                            <li *ngIf="UserRole === 'SuperMDA'">
                                 <a>
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Reports </div>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngIf="UserRole === 'EnteryUser'">
                                 <a  routerLink="/application-form">
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>

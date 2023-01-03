@@ -1,9 +1,11 @@
 .breadcrumb-title {
     color: black;
 }
+
 .breadcrumb-item {
     color: black;
 }
+
 .form-control:focus {
     color: #212529;
     background-color: #fff;
@@ -12,15 +14,68 @@
     box-shadow: none;
 }
 
-.color{
+.color {
     opacity: 0.3;
 }
-.card{
+
+.card {
     background-color: #fff0;
 }
+
 .table-light {
     --bs-table-bg: #fff0;
 }
-.table-light{
+
+.table-light {
     font-size: 16px;
+}
+
+.search-hero {
+    text-align: end;
+}
+
+.clss {
+    background-color: #ffffff66 !important;
+    color: #040404c4 !important;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #17a00e;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 253 67 / 25%);
+
+}
+
+.cls {
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    /* display: flex; */
+    /* align-items: center; */
+    justify-content: center;
+    background: #f1f1f1;
+    border: 1px solid #eeecec;
+    text-align: center;
+    border-radius: 20%;
+    color: #2b2a2a;
+}
+
+.cls:hover {
+    color: #17a00e;
+    background-color: #007a5f05;
+}
+
+.dropdown-menu {
+    background-color: #e9ede9;
+
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 0 !important;
 }

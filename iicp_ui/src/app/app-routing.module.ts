@@ -65,12 +65,12 @@ const routes: Routes = [
   
   {
     path: 'user-form',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles:"SuperMDA"},
     component: FormComponent
   },
   {
     path: 'submit-applications',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles: "SuperMDA"},
     component: RenewCertificateComponent
   },
   {
@@ -80,24 +80,34 @@ const routes: Routes = [
   },
   {
     path: 'search-register-accounts',canActivate:[AuthGuard],
-    data: {roles: 2},
+    data: {roles: "SuperMDA"},
     component: SearchRegisterAcountsComponent
   },
+   //Super Mda
   {
      path: 'dashboard',//canActivate:[AuthGuard],
-    // data: {roles: "SuperMDA"},
+    //data: {roles: "SuperMDA"},
     component: UserDashboardComponent
   },
+
+  //Super Mda
   {
-    path: 'company-profile',canActivate:[AuthGuard],
-    data: {roles: "EntryUser"},
+    path: 'rejected-project',canActivate:[AuthGuard],
+    data: {roles: "EnteryUser" },
     component: MyCompanyProfileComponent
   },
+  {
+    path: 'rejected-projects',canActivate:[AuthGuard],
+    data: { roles:"SuperMDA"},
+    component: MyCompanyProfileComponent
+  },
+  //Super Mda
   {
     path: 'my-certificate',canActivate:[AuthGuard],
     data: {roles: "SuperMDA"},
     component: MyCertificateComponent
   },
+  //Super Mda
   {
     path: 'renewal-certificate',canActivate:[AuthGuard],
     data: {roles: "SuperMDA"},
@@ -115,7 +125,7 @@ const routes: Routes = [
   },
 
   {  path: 'application-form',canActivate:[AuthGuard],
-  data: {roles: "EntryUser"},
+  data: {roles: "EnteryUser"},
     component: ApplicationFormComponent
   },
   {  path: 'edit-application-form',canActivate:[AuthGuard],
