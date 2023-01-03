@@ -22,6 +22,13 @@
                         </div>
                         <!--navigation-->
                         <ul class="metismenu mm-show" id="menu">
+                            <li *ngIf="UserRole === 'EnteryUser'">
+                                <a  routerLink="/application-form">
+                                    <div class="parent-icon"><i class="bx bx-category"></i>
+                                    </div>
+                                    <div class="menu-title">Application Form </div>
+                                </a>
+                            </li>
                             <li *ngIf="UserRole === 'SuperMDA'" >
                                 <a routerLink="/dashboard"  aria-expanded="true">
                                     <div class="parent-icon"><i class="bx bx-home-circle"></i>
@@ -71,7 +78,7 @@
                                 </a>
                             </li> -->
                             <li *ngIf="UserRole === 'SuperMDA'">
-                                <a routerLink="/search-register-accounts">
+                                <a routerLink="/project-in-progress">
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">Project In Progress </div>
@@ -85,7 +92,7 @@
                                 </a>
                             </li>
                             <li *ngIf="UserRole === 'SuperMDA'">
-                                <a routerLink="/my-certificate" >
+                                <a routerLink="/new-project" >
                                     <div class="parent-icon"><i class="bx bx-category"></i>
                                     </div>
                                     <div class="menu-title">New Projects</div>
@@ -133,13 +140,7 @@
                                     <div class="menu-title">Reports </div>
                                 </a>
                             </li>
-                            <li *ngIf="UserRole === 'EnteryUser'">
-                                <a  routerLink="/application-form">
-                                    <div class="parent-icon"><i class="bx bx-category"></i>
-                                    </div>
-                                    <div class="menu-title">Application Form </div>
-                                </a>
-                            </li>
+                       
                         </ul>
                         <!--end navigation-->
                     </div>

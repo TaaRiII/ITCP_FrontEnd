@@ -38,8 +38,9 @@ ngOnInit() {
 // console.log("qwqwqwqw");
 // }
 // ))
-console.log("hhhhiiiyyyyiyiyiiyyiyiyiiyyiiyiyiyyiyiiyyiiyyiyi")
-console.log(this._authService.currentUserValue);
+
+// console.log("hhhhiiiyyyyiyiyiiyyiyiyiiyyiiyiyiyyiyiiyyiiyyiyi")
+// console.log(this._authService.currentUserValue);
 
 this.UserRole = this._authService.currentUserValue;
 console.log("role"+this.UserRole);

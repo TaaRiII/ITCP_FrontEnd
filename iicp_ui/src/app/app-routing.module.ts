@@ -79,7 +79,7 @@ const routes: Routes = [
     component: UserProfileComponent
   },
   {
-    path: 'search-register-accounts',canActivate:[AuthGuard],
+    path: 'project-in-progress',canActivate:[AuthGuard],
     data: {roles: "SuperMDA"},
     component: SearchRegisterAcountsComponent
   },
@@ -103,7 +103,7 @@ const routes: Routes = [
   },
   //Super Mda
   {
-    path: 'my-certificate',canActivate:[AuthGuard],
+    path: 'new-project',canActivate:[AuthGuard],
     data: {roles: "SuperMDA"},
     component: MyCertificateComponent
   },
