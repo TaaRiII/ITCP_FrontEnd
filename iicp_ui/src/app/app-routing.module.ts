@@ -31,6 +31,8 @@ import { SuperRegisterUserComponent } from './Admin_View/Layout/super-register-u
 import { CertificateMdaListComponent } from './Admin_View/Layout/certificate-mda-list/certificate-mda-list.component';
 import { SingleMdaListComponent } from './Admin_View/Layout/single-mda-list/single-mda-list.component';
 import { AddCredentialUserComponent } from './Admin_View/Layout/add-credential-user/add-credential-user.component';
+import { AdminCommitteeComponent } from './Admin_View/Layout/admin-committee/admin-committee.component';
+import { AdminGenerateCertificateComponent } from './Admin_View/Layout/admin-generate-certificate/admin-generate-certificate.component';
 
 
 const routes: Routes = [
@@ -179,6 +181,14 @@ component: SuperRegisterUserComponent
 {
   path:"create-credential-user",
   component:AddCredentialUserComponent
+},
+{
+  path:"admin-committee",
+  component:AdminCommitteeComponent
+},
+{
+  path:"admin-generate-certficate",
+  component:AdminGenerateCertificateComponent
 },
   // {
   //   path: '',
